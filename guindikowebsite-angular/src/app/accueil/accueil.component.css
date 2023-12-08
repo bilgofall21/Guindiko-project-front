@@ -83,6 +83,17 @@ font-size: 15px;
   height: 10rem;
   border-radius: 20px;
 }
+#textarticle{
+  max-height: 60px;
+  overflow: hidden;
+}
+
+
+/* css caroussel */
+
+
+
+
 
 
 
