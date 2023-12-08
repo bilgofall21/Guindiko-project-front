@@ -7,6 +7,7 @@ import { HeaderComponent } from './header-footer/header/header.component';
 import { FooterComponent } from './header-footer/footer/footer.component';
 import { BgColorBlueguindikoDirective } from './bg-color-blueguindiko.directive';
 import { BgColorOrangeguindikoDirective } from './bg-color-orangeguindiko.directive';
+import { AccueilComponent } from './accueil/accueil.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BgColorOrangeguindikoDirective } from './bg-color-orangeguindiko.direct
     HeaderComponent,
     FooterComponent,
     BgColorBlueguindikoDirective,
-    BgColorOrangeguindikoDirective
+    BgColorOrangeguindikoDirective,
+    AccueilComponent
   ],
   imports: [
     BrowserModule,
