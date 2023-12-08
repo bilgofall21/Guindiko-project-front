@@ -1,0 +1,46 @@
+#bannière{
+  height: 60vh;
+}
+#bannière img{
+  height: 60vh;
+  width: 100%;
+}
+
+.card-text {
+ margin-left: 12%;
+ gap: 20px;
+ float: left;
+}
+.card {
+  background-color: white;
+  box-shadow: 1px 4px 10px solid #E68513 ;
+}
+.carte .img card{
+ height: 30rem;
+}
+.carte{
+  margin-left: 10%;
+  align-items: center;
+  width: 80%;
+  background-color: #00225A;
+  border-radius: 20px;
+  color: white;
+}
+
+.carte-slide{
+  background-color: white;
+  box-shadow: #00225A;
+}
+.info{
+  width: 90%;
+
+  align-items: center;
+  /* background-color: #00225A; */
+  border: #E68513 2px solid;
+  margin-left: 5%;
+}
+span i{
+  font-weight: 700;
+
+  color: #E68513;
+}

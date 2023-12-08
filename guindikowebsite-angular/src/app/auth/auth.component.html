@@ -1,0 +1,71 @@
+<div class=" container  d-flex p-4 bg-secondary  " id="form-first">
+
+  <div class=" col-lg-4" id="img-contain" >
+      <img  src="../../assets/img-connexion/stock-photo-smiling-middle-aged-african-american-woman-with-orange-headscarf-beautiful-black-woman-in-casual-2099982595 1.png" alt="">
+  </div>
+  <div class=" col-lg-8 border border-2 bg-white mx-0" id="seconde-part-contain" *ngIf="afficherBloc1">
+      <div id="logo-content">
+          <!-- <i class="bi bi-x-diamond"></i><span>Logo</span> -->
+      </div>
+      <div>
+          <p id="description">Connexion</p>
+          <i class="bi bi-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+      </div>
+
+      <form action=""  >
+          <div class="mb-3" >
+            <label for="exampleFormControlInput1" class="form-label">Nom d'utilisateur/Email</label>
+            <input type="email" class="form-control" name="monChamp1" id="exampleFormControlInput1" placeholder="nom utilisateur/email" >
+          </div>
+
+          <div class="mb-3">
+            <label for="passwordExemple" class="form-label">Mot de pass</label>
+            <input type="password" class="form-control" name="monChamp2" id="passwordExemple" placeholder="mot de pass" >
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-dark mb-3" id="btn-login" (click)="verifierLogin();">Se connecter</button>
+
+
+              <p>Mot de pass oubier</p>
+              <button id="btn-btn" (click)="basculerBlocs(); ">Nouveau Utilisateur? S'enregistrer</button>
+          </div>
+        </form>
+  </div>
+
+</div>
+
+
+
+
+<div class="" id="form-seconde" *ngIf="!afficherBloc1">
+  <h2 class="text-center" id="inscription">Inscription</h2>
+
+  <form action="">
+      <div class="mb-3">
+        <label for="nameInput1" class="form-label">Nom</label>
+        <input type="text" class="form-control"  name="monChamp3" id="nameInput1" placeholder="votre nom de famille">
+      </div>
+      <div class="mb-3">
+          <label for="nameInput2" class="form-label">Prenom</label>
+          <input type="tel" class="form-control"name="monChamp4" id="nameInput2" placeholder="votre prenom">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" name="monChamp5" id="exampleFormControlInput1" [placeholder]="contenu">
+        </div>
+
+      <div class="mb-3">
+        <label for="passwordExemple" class="form-label">password</label>
+        <input type="password" class="form-control" name="monChamp6" id="passwordExemple">
+      </div>
+      <div class="mb-3">
+        <label for="passwordExemple" class="form-label">password confirm</label>
+        <input type="password" class="form-control" name="monChamp7" id="passwordExemple" >
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-dark mb-3" id="btn-login" (click)="verifierRegister()">Register</button>
+          <p>Forgot password ?</p>
+      </div>
+    </form>
+  </div>
