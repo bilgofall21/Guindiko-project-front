@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="gestion-contenu.component.css">
+
+	<title>AdminHub</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+    <div class="brand mt-1" id="brand">
+        <span class="text text-white"><img src="assets/dashboard/logofooter.png" alt=""></span>
+        <div class="ms-3 mt-3">
+          <p style="font-size: 16px;">Gorgui Amadem FALL</p>
+          <p style="font-size: 14px;">en ligne</p>
+
+        </div>
+    </div>
+		<ul class="side-menu top">
+			<li class="active">
+				<a>
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text"[routerLink]="['/dashboard']">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a>
+					<i class="fa-regular fa-newspaper"></i>
+					<span class="text"[routerLink]="['/gestion-contenu']">Gestion contenu</span>
+				</a>
+			</li>
+			<li>
+				<a>
+					<i class="fa-solid fa-users"></i>
+					<span class="text"[routerLink]="['/gestion-user']">Gestion utilisateurs</span>
+				</a>
+			</li>
+			<li>
+				<a>
+					<i class="fa-solid fa-user"></i>
+					<span class="text"[routerLink]="['/gestion-profil']">Gestion profil</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu mt-4">
+			
+			<li>
+				<a class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Deconnexion</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+      <button type="button" class="btn btnAdd" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Ajouter un service
+      </button>
+      <div class="content-wrapper">
+        <div class="">
+          <h2 class="card-title text-center">Contenu de la plateforme</h2>
+          <div class="row mt-5 d-flex flex-wrap justify-content-center">
+            <div class="col-4">
+              <div class="card imgCard" style="width: 18rem;">
+                <img src="https://img.freepik.com/photos-gratuite/concept-controle-qualite-standard-m_23-2150041859.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=sph" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Informatique</h5>
+                  <p class="card-text">Le mentorat en informatique, c’est bien plus qu’une profession, c’est une passerelle vers l’excellence numérique. En tant que mentor en informatique, ....</p>
+                  <a class="">
+                    <i class="fa-solid fa-eye me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-pen me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-trash-can me-4" style="color: #E68513;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card imgCard" style="width: 18rem;">
+                <img src="https://img.freepik.com/photos-gratuite/portrait-oeil-abstrait-elegance-jeunes-femmes-generee-par-ia_188544-9712.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=sph" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Art</h5>
+                  <p class="card-text">Le mentorat en art est une forme d’accompagnement artistique qui transcende les techniques et les médiums. En tant que mentor en art, vous avez le po, ....</p>
+                  <a class="">
+                    <i class="fa-solid fa-eye me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-pen me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-trash-can me-4" style="color: #E68513;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card imgCard" style="width: 18rem;">
+                <img src="https://img.freepik.com/photos-gratuite/homme-affaires-noir-aide-ordinateur-portable_53876-24736.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=ais" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Gestion et management</h5>
+                  <p class="card-text">Le mentorat en gestion est une profession dédiée à façonner les futurs leaders et à renforcer les compétences en gestion. En tant que mentor en gestion, ...</p>
+                  <a class="">
+                    <i class="fa-solid fa-eye me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-pen me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-trash-can me-4" style="color: #E68513;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5 d-flex flex-wrap justify-content-center">
+            <div class="col-4">
+              <div class="card imgCard" style="width: 18rem;">
+                <img src="https://img.freepik.com/photos-gratuite/concept-controle-qualite-standard-m_23-2150041859.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=sph" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Informatique</h5>
+                  <p class="card-text">Le mentorat en informatique, c’est bien plus qu’une profession, c’est une passerelle vers l’excellence numérique. En tant que mentor en informatique, ....</p>
+                  <a class="">
+                    <i class="fa-solid fa-eye me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-pen me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-trash-can me-4" style="color: #E68513;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card imgCard" style="width: 18rem;">
+                <img src="https://img.freepik.com/photos-gratuite/portrait-oeil-abstrait-elegance-jeunes-femmes-generee-par-ia_188544-9712.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=sph" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Art</h5>
+                  <p class="card-text">Le mentorat en art est une forme d’accompagnement artistique qui transcende les techniques et les médiums. En tant que mentor en art, vous avez le po, ....</p>
+                  <a class="">
+                    <i class="fa-solid fa-eye me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-pen me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-trash-can me-4" style="color: #E68513;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card imgCard" style="width: 18rem;">
+                <img src="https://img.freepik.com/photos-gratuite/homme-affaires-noir-aide-ordinateur-portable_53876-24736.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=ais" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Gestion et management</h5>
+                  <p class="card-text">Le mentorat en gestion est une profession dédiée à façonner les futurs leaders et à renforcer les compétences en gestion. En tant que mentor en gestion, ...</p>
+                  <a class="">
+                    <i class="fa-solid fa-eye me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-pen me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-trash-can me-4" style="color: #E68513;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+             <!-- pour la pagination -->
+    <div class="d-flex justify-content-center my-5">
+      <button class="btn btnColor me-2" [disabled]="pageActuelle === 1" (click)="pageActuelle = pageActuelle - 1">
+        Précédent
+      </button>
+      <button class="btn btnColor ms-2" *ngFor="let page of pages" (click)="pageActuelle = page">
+        {{ page }}
+      </button>
+      <button class="btn btnColor ms-2" [disabled]="pageActuelle === totalPages" (click)="pageActuelle = pageActuelle + 1">
+        Suivant
+      </button>
+  </div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+	<script src="script.js"></script>
+</body>
+</html>
+
+<!-- Popup pour afficher détail -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un service</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Titre</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Contenu</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="formFileMultiple" class="form-label">Image(s)</label>
+          <input class="form-control" type="file" id="formFileMultiple" multiple>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
