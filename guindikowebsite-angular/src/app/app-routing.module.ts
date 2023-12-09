@@ -25,7 +25,7 @@ import { DashboardmentoreComponent } from './dashboardMentore/dashboardmentore/d
 import { GestionDemandeMentoreComponent } from './dashboardMentore/gestion-demande-mentore/gestion-demande-mentore.component';
 import { GestionProfilMentoreComponent } from './dashboardMentore/gestion-profil-mentore/gestion-profil-mentore.component';
 const routes: Routes = [
-  {path : '', component : AccueilComponent,},
+  // {path : '', component : AccueilComponent,},
   {path : 'listes-mentor', component :ListesMentorComponent,},
   {path : 'article-home' , component : ArticleHomeComponent,},
   {path : 'details-article', component : DetailsArticleComponent,},
