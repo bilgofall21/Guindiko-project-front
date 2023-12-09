@@ -7,6 +7,9 @@ import { HeaderComponent } from './header-footer/header/header.component';
 import { FooterComponent } from './header-footer/footer/footer.component';
 import { BgColorBlueguindikoDirective } from './bg-color-blueguindiko.directive';
 import { BgColorOrangeguindikoDirective } from './bg-color-orangeguindiko.directive';
+import { AuthComponent } from './auth/auth.component';
+import { AProposComponent } from './a-propos/a-propos.component';
+import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { BgColorOrangeguindikoDirective } from './bg-color-orangeguindiko.direct
     HeaderComponent,
     FooterComponent,
     BgColorBlueguindikoDirective,
-    BgColorOrangeguindikoDirective
+    BgColorOrangeguindikoDirective,
+    AuthComponent,
+    AProposComponent,
+    PolitiqueDeConfidentialiteComponent
   ],
   imports: [
     BrowserModule,
