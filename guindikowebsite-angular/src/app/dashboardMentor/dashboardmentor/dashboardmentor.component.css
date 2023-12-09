@@ -58,9 +58,6 @@ body {
 	transition: .3s ease;
 	overflow-x: hidden;
 	scrollbar-width: none;
-    margin: 0;
-	padding: 0;
-	box-sizing: border-box;
 }
 #sidebar::--webkit-scrollbar {
 	display: none;
@@ -251,7 +248,7 @@ body {
 	cursor: pointer;
 }
 #content nav .notification {
-	font-size: 20px;
+	font-size: 25px;
 	position: relative;
 }
 #content nav .notification .num {
@@ -262,7 +259,7 @@ body {
 	height: 20px;
 	border-radius: 50%;
 	border: 2px solid var(--light);
-	background: var(--red);
+	background: #E68513;
 	color: var(--light);
 	font-weight: 700;
 	font-size: 12px;
@@ -558,49 +555,21 @@ body {
     background-color: none;
     text-shadow: 5px 2px 5px #00225A;
 }
-.profilAdmin{
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap
+.side-menu{
+    margin: 0;
+	padding: 0;
 }
-.right-profil input{
-	width: 70%;
-	border: 1px solid #00225A;
+.imgCard img{
+	height: 200px;
 }
-.first{
-	background-color: #00225A;
-	width: 150px;
-	height: 4px;
-	position: relative;
-	top: -40px;
-	left: 430px;
+.cardArticle{
+    margin: 0 auto;
 }
-.second{
-	background-color: #E68513;
-	border-radius: 100%;
-	width: 20px;
-	height: 10px;
-	position: relative;
-	top: -47px;
-	left: 490px;
-}
-.left-profil img{
-	width: 80%;
-	height: 80%;
-}
-.pwd{
-	width: 60%;
-}
-.pwd input{
-	width: 60%;
-	border: 1px solid #00225A;
-}
-.btnSave{
-	border: none;
-	background-color: #00225A;
-	color: white;
-	font-weight: bold;
-	border-radius: 10px;
+.line{
+    background-color: #E68513;
+    width: 80px;
+    height: 3px;
+    margin-left: 50px;
 }
 /* MAIN */
 /* CONTENT */

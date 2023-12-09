@@ -58,9 +58,6 @@ body {
 	transition: .3s ease;
 	overflow-x: hidden;
 	scrollbar-width: none;
-    margin: 0;
-	padding: 0;
-	box-sizing: border-box;
 }
 #sidebar::--webkit-scrollbar {
 	display: none;
@@ -558,14 +555,14 @@ body {
     background-color: none;
     text-shadow: 5px 2px 5px #00225A;
 }
-.profilAdmin{
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap
+.side-menu{
+    margin: 0;
+	padding: 0;
 }
-.right-profil input{
-	width: 70%;
-	border: 1px solid #00225A;
+.trHead td{
+	background-color: #00225A;
+	color: white;
+	font-weight: bold;
 }
 .first{
 	background-color: #00225A;

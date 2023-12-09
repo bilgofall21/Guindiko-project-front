@@ -8,6 +8,12 @@ import Swal from 'sweetalert2';
   styleUrls: ['./gestion-profil.component.css']
 })
 export class GestionProfilComponent {
+
+  ngOnInit(): void {
+    const script = document.createElement('script');
+    script.src = '../../../assets/js/script.js';
+    document.body.appendChild(script);
+  }
   verifInfos(title: any, text: any, icon: any) {
     Swal.fire({
       title: title,

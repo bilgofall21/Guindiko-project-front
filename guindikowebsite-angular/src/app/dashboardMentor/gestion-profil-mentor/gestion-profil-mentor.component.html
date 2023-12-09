@@ -7,7 +7,7 @@
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="gestion-profil.component.css">
+	<link rel="stylesheet" href="gestion-profil-mentor.component.css">
 
 	<title>AdminHub</title>
 </head>
@@ -19,14 +19,14 @@
     <div class="brand mt-1" id="brand">
         <span class="text text-white"><img src="assets/dashboard/logofooter.png" alt=""></span>
         <div class="ms-3">
-          <p style="font-size: 18px;">Gorgui Amadem FALL</p>
+          <p class="mt-3" style="font-size: 18px;">Gorgui Amadem FALL</p>
           <p style="font-size: 16px;">en ligne</p>
 
         </div>
     </div>
 		<ul class="side-menu top">
 			<li class="active">
-				<a>
+				<a >
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text" [routerLink]="['/dashboard']">Dashboard</span>
 				</a>
@@ -38,15 +38,15 @@
 				</a>
 			</li>
 			<li>
-				<a>
+				<a >
 					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text" [routerLink]="['/gestion-user']">Gestion utilisateurs</span>
 				</a>
 			</li>
 			<li>
-				<a>
-					<i class='bx bxs-message-dots' ></i>
-					<span class="text" [routerLink]="['/gestion-profil']">Gestion profil</span>
+				<a >
+		      <i class='bx bxs-message-dots' ></i>
+					<span class="text" [routerLink]="['/gestion-profil-mentor']">Gestion profil</span>
 				</a>
 			</li>
 		</ul>
@@ -70,18 +70,18 @@
 		<nav>
 			<i class='bx bx-menu' ></i>
 			<form action="#">
-				<div class="form-input mt-3">
+				<div class="form-input">
 					<input type="search" placeholder="Search...">
 					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div>
 			</form>
 			<input type="checkbox" id="switch-mode" hidden>
 			<label for="switch-mode" class="switch-mode"></label>
-			<a class="notification">
+			<a href="#" class="notification">
 				<i class='bx bxs-bell' ></i>
 				<span class="num">8</span>
 			</a>
-			<a class="profile">
+			<a href="#" class="profile">
 				<img src="img/people.png">
 			</a>
 		</nav>
@@ -138,7 +138,7 @@
           </div>
         </form>
       </div>
-      <button class="btnSave p-2" (click)="saveModif()">Enregistrer</button>
+      <button class="btnSave p-2">Enregistrer</button>
 		</main>
 		<!-- MAIN -->
 	</section>
@@ -147,44 +147,3 @@
 	<script src="script.js"></script>
 </body>
 </html>
-
-<!-- Popup pour afficher détail -->
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Détail de l'utilisateur</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body d-flex justify-content-between">
-        <div>
-          <div class="">
-            <span>Nom : </span><span>FALL</span>
-          </div>
-          <div class="mt-3">
-            <span>Prénom : </span><span>Amadem</span>
-          </div>
-          <div class="mt-3">
-            <span>Téléphone : </span><span>77 777 77 77 </span>
-          </div>
-          <div class="mt-3">
-            <span>username : </span><span>sasuke</span>
-          </div>
-          <div class="mt-3">
-            <span>Rôle : </span><span>Mentor</span>
-          </div>
-          <div class="mt-3">
-            <span>Membre depuis : </span><span>08/12/2023</span>
-          </div>
-        </div>
-        <div class="imgPopup">
-          <img src="https://img.freepik.com/photos-gratuite/portrait-beau-male-barbu_23-2148563532.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=ais" alt="">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <h1 class="text-center text-footer justify-content-center" style="color: #E68513;">GUINDIKO</h1>
-      </div>
-    </div>
-  </div>
-</div>

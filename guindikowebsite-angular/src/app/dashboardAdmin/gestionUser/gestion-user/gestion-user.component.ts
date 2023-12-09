@@ -11,6 +11,12 @@ export class GestionUserComponent {
   articlesParPage = 10; // Nombre d'articles par page
   pageActuelle = 1; // Page actuelle
 
+  ngOnInit(): void {
+    const script = document.createElement('script');
+    script.src = '../../../assets/js/script.js';
+    document.body.appendChild(script);
+  }
+
     // Méthode pour déterminer les articles à afficher sur la page actuelle
     getArticlesPage(): any[] {
       const indexDebut = (this.pageActuelle - 1) * this.articlesParPage;
