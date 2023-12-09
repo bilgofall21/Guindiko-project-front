@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="gestion-contenu-mentor.component.css">
+
+	<title>AdminHub</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+    <div class="brand mt-1" id="brand">
+        <span class="text text-white"><img src="assets/dashboard/logofooter.png" alt=""></span>
+        <div class="ms-3 nameUser">
+          <p class="mt-3" style="font-size: 16px;">Véro M G D</p>
+          <p style="font-size: 14px;">en ligne</p>
+
+        </div>
+    </div>
+		<ul class="side-menu top">
+			<li class="active">
+				<a >
+					<i class='bx bxs-dashboard' [routerLink]="['/dashboardmentor']"></i>
+					<span class="text" [routerLink]="['/dashboardmentor']">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a>
+					<i class='bx bxs-shopping-bag-alt' [routerLink]="['/gestion-contenu-mentor']"></i>
+					<span class="text" [routerLink]="['/gestion-contenu-mentor']">Gestion contenu</span>
+				</a>
+			</li>
+			<li>
+				<a >
+					<i class='bx bxs-doughnut-chart' [routerLink]="['/gestion-demande']"></i>
+					<span class="text" [routerLink]="['/gestion-demande']">Gestion demandes</span>
+				</a>
+			</li>
+			<li>
+				<a >
+		      <i class='bx bxs-message-dots' [routerLink]="['/gestion--mentor']"></i>
+					<span class="text" [routerLink]="['/gestion-profil-mentor']">Gestion profil</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu mt-4">
+			
+			<li>
+				<a class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Deconnexion</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' style="color: #E68513; font-size: 30px;"></i>
+			<form action="#">
+				<div class="form-input mt-3">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' style="color: #00225A;"></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+      <button class="btnAdd p-1 px-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter un article</button>
+      <div class="content-wrapper">
+        <div class="row mt-5 d-flex flex-wrap justify-content-center cardsAticle">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card imgCard" style="width: 18rem;">
+              <img src="https://img.freepik.com/photos-gratuite/fond-humain-poignee-main-robot-ere-numerique-futuriste_53876-129770.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=sph" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">L'intélligence artificielle</h5>
+                <p class="card-text">L'IA (Intelligence Artificielle) est une discipline de l'informatique qui vise à créer des systèmes capables d'imiter l'intelligence humaine. C’est processus d'imitation de l'intelligence humaine qui repose sur la création et l'application ....</p>
+                <a class="">
+                  <i class="fa-solid fa-eye me-4" style="color: #E68513;"></i>
+                  <i class="fa-solid fa-pen me-4" style="color: #E68513;"></i>
+                  <i class="fa-solid fa-trash-can me-4" style="color: #E68513;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card imgCard" style="width: 18rem;">
+              <img src="https://img.freepik.com/photos-gratuite/insigne-securite-internet-3d_1048-18106.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=sph" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">La cybersécurité</h5>
+                <p class="card-text">La cybersécurité est un « sous-ensemble » de la sécurité informatique. Elle vise à protéger les ressources du piratage ou des cyberattaques, c'est-à-dire des menaces provenant d'Internet ou survenant via Internet.</p>
+                <a class="">
+                  <i class="fa-solid fa-eye me-4" style="color: #E68513;"></i>
+                  <i class="fa-solid fa-pen me-4" style="color: #E68513;"></i>
+                  <i class="fa-solid fa-trash-can me-4" style="color: #E68513;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card imgCard" style="width: 18rem;">
+              <img src="https://img.freepik.com/photos-gratuite/vue-appareil-informatique-3d-peripheriques_23-2150714035.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=sph" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Pourquoi l'informatique</h5>
+                <p class="card-text">Les solutions informatiques contribuent, par exemple, à résoudre des problèmes environnementaux, à améliorer les soins de santé, à accroître la qualité de l'éducation, à faciliter les communications, et plus encor</p>
+                <a class="">
+                  <i class="fa-solid fa-eye me-4" style="color: #E68513;"></i>
+                  <i class="fa-solid fa-pen me-4" style="color: #E68513;"></i>
+                  <i class="fa-solid fa-trash-can me-4" style="color: #E68513;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+	<script src="script.js"></script>
+</body>
+</html>
+<!-- Popup pour ajouter un service -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un service</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Titre</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Contenu</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="formFileMultiple" class="form-label">Image(s)</label>
+          <input class="form-control" type="file" id="formFileMultiple" multiple>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="btn addArticle">Ajouter</button>
+      </div>
+    </div>
+  </div>
+</div>
