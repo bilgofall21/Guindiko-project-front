@@ -9,15 +9,10 @@
   width: 60%;
   height: 500px;
   margin: 0 auto;
-
+ 
 }
-#form-first{
 
-}
-#btn-login{
-  width: 50%;
 
-}
 form input{
   width: 50%;
 
@@ -33,11 +28,11 @@ form,#description{
 }
 #form-seconde{
   width: 25%;
-  height: 520px;
+  height: 500px;
   margin: 0 auto;
   background-color: #00225A;
   position: relative;
-  top: -510px;
+  top: -500px;
   left: 12.5%;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;

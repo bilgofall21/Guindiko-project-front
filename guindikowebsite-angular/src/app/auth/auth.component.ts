@@ -9,10 +9,11 @@ import Swal from 'sweetalert2';
 export class AuthComponent implements OnInit {
   ngOnInit(): void {
 
+
   }
 
   contenu='exemple@gmail.com'
-  imageUrl='../../assets/img-connexion/stock-photo-smiling-middle-aged-african-american-woman-with-orange-headscarf-beautiful-black-woman-in-casual-2099982595 1.png'
+  imageUrl='../../assets/img-connexion/femme-affaires-attrayant-bras-croises_13339-12510.avif'
   // email=true
 
 
@@ -96,20 +97,3 @@ export class AuthComponent implements OnInit {
   }
 
 }
-//   validerChamps() {
-//     if () {
-
-//     }
-
-//     Swal.fire({
-//       icon:'success',
-//       title: 'bravo!',
-//       text: 'Votre compte a bien été creer avec succès',
-//     })
-
-// }
-
-
-
-
-
