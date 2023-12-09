@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { ContactComponent } from './contact/contact.component';
 import { NosServicesComponent } from './serviceGuindoko/nos-services/nos-services.component';
 import { DetailInformatiqueComponent } from './serviceGuindoko/detail-informatique/detail-informatique.component';
@@ -12,9 +13,16 @@ import { DetailHotellerieComponent } from './serviceGuindoko/detail-hotellerie/d
 import { DetailScienceComponent } from './serviceGuindoko/detail-science/detail-science.component';
 import { DetailArtComponent } from './serviceGuindoko/detail-art/detail-art.component';
 
+import { HeaderComponent } from './header-footer/header/header.component';
+import { FooterComponent } from './header-footer/footer/footer.component';
+import { BgColorBlueguindikoDirective } from './bg-color-blueguindiko.directive';
+import { BgColorOrangeguindikoDirective } from './bg-color-orangeguindiko.directive';
+
+
 @NgModule({
   declarations: [
     AppComponent,
+
     ContactComponent,
     NosServicesComponent,
     DetailInformatiqueComponent,
@@ -22,7 +30,12 @@ import { DetailArtComponent } from './serviceGuindoko/detail-art/detail-art.comp
     DetailTechniqueComponent,
     DetailHotellerieComponent,
     DetailScienceComponent,
-    DetailArtComponent
+    DetailArtComponent,
+    HeaderComponent,
+    FooterComponent,
+    BgColorBlueguindikoDirective,
+    BgColorOrangeguindikoDirective
+
   ],
   imports: [
     BrowserModule,
