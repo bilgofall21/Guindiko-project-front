@@ -155,6 +155,10 @@ body {
 	display: flex;
 	justify-content: center;
 }
+.side-menu{
+    margin: 0;
+	padding: 0;
+}
 /* SIDEBAR */
 
 
@@ -230,7 +234,7 @@ body {
 	padding: 0 16px;
 	height: 100%;
 	border: none;
-	background: rgba(128, 128, 128, 0.446);
+	background: rgba(128, 128, 128, 0.133);
 	border-radius: 36px 0 0 36px;
 	outline: none;
 	width: 100%;
@@ -242,9 +246,10 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: rgba(128, 128, 128, 0.446);
-	color: var(--light);
-	font-size: 18px;
+	background: #00225A;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
 	border: none;
 	outline: none;
 	border-radius: 0 36px 36px 0;
@@ -262,8 +267,8 @@ body {
 	height: 20px;
 	border-radius: 50%;
 	border: 2px solid var(--light);
-	background: var(--red);
-	color: var(--light);
+	background: #E68513;
+	color: white;
 	font-weight: 700;
 	font-size: 12px;
 	display: flex;
@@ -354,10 +359,6 @@ body {
 	grid-gap: 10px;
 	font-weight: 500;
 }
-
-
-
-
 #content main .box-info {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -401,11 +402,6 @@ body {
 #content main .box-info li .text p {
 	color: var(--dark);	
 }
-
-
-
-
-
 #content main .table-data {
 	display: flex;
 	flex-wrap: wrap;
@@ -601,17 +597,10 @@ body {
 	color: white;
 	font-weight: bold;
 	border-radius: 10px;
+	margin-left: 90%;
 }
 /* MAIN */
 /* CONTENT */
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 768px) {
 	#sidebar {
@@ -629,12 +618,17 @@ body {
     #sidebar .brand{
         display: none;
     }
+	.pwd{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.first, .second{
+		display: none;
+	}
+	.btnSave{
+		margin-left: 0;
+	}
 }
-
-
-
-
-
 
 @media screen and (max-width: 576px) {
 	#content nav form .form-input input {
@@ -657,8 +651,8 @@ body {
 		width: 36px;
 		height: 100%;
 		border-radius: 0 36px 36px 0;
-		color: var(--light);
-		background: var(--red);
+		color: white;
+		background: #00225A;
 	}
 
 	#content nav form.show ~ .notification,
@@ -682,4 +676,14 @@ body {
     #sidebar .brand{
         display: none;
     }
+	.pwd{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.first, .second{
+		display: none;
+	}
+	.btnSave{
+		margin-left: 0;
+	}
 }

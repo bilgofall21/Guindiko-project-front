@@ -261,7 +261,7 @@ body {
 	border-radius: 50%;
 	border: 2px solid var(--light);
 	background: #E68513;
-	color: var(--light);
+	color: white;
 	font-weight: 700;
 	font-size: 12px;
 	display: flex;
@@ -560,26 +560,89 @@ body {
     margin: 0;
 	padding: 0;
 }
-.imgCard img{
-	height: 200px;
+.trHead td{
+	background-color: #00225A;
+	color: white;
+	font-weight: bold;
 }
-.cardArticle{
-    margin: 0 auto;
+.gridProfil{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 50px;
 }
-.line{
-    background-color: #E68513;
-    width: 80px;
-    height: 3px;
-    margin-left: 50px;
+.firstItem{
+    margin-top: 100px;
+}
+.itemfirst{
+    border-radius: 15px;
+    border: 3px solid #00225A;
+    font-weight: bold;
+    /* box-shadow: 10px 5px 5px #00225A; */
+}
+.firstItemImg img{
+    height: 150px;
+    width: 80%;
+    position: relative;
+    top: 25px;
+    left: 60px;
+    border-radius: 20px;
+}
+.firstItem input{
+    width: 90%;
+    height: 30px;
+    border: 1px solid #00225A;
+}
+.mb{
+    margin-top: -10px;
+}
+.firstItemS{
+    width: 60%;
+    margin: 0 auto !important;
+}
+.btnSave{
+	border: none;
+	background-color: #00225A;
+	color: white;
+	font-weight: bold;
+	border-radius: 10px;
+	margin-left: 90%;
+}
+.mdp{
+    margin-top: 150px;
 }
 /* MAIN */
 /* CONTENT */
+@media screen and (max-width: 900px) {
+	#sidebar {
+		width: 200px;
+	}
 
+	#content {
+		width: calc(100% - 60px);
+		left: 200px;
+	}
 
+	#content nav .nav-link {
+		display: none;
+	}
+    #sidebar .brand{
+        display: none;
+    }
+	.carte{
+		grid-template-columns: 1fr;
+		margin-right: 20px;
+	  }
 
-
-
-
+	table{
+		table-layout: auto;
+	}
+    .gridProfil{
+        grid-template-columns: 1fr;
+    }
+    .btnSave{
+		margin-left: 0;
+	}
+}
 
 
 
@@ -601,19 +664,18 @@ body {
     }
 	.carte{
 		grid-template-columns: 1fr;
-		margin: 0 auto;
-		background-color: #3C91E6;
 	  }
-	  
+
 	table{
 		table-layout: auto;
 	}
+    .gridProfil{
+        grid-template-columns: 1fr;
+    }
+    .btnSave{
+		margin-left: 0;
+	}
 }
-
-
-
-
-
 
 @media screen and (max-width: 576px) {
 	#content nav form .form-input input {
@@ -636,8 +698,8 @@ body {
 		width: 36px;
 		height: 100%;
 		border-radius: 0 36px 36px 0;
-		color: var(--light);
-		background: var(--red);
+		color: white;
+		background: #00225A;
 	}
 
 	#content nav form.show ~ .notification,
@@ -667,5 +729,11 @@ body {
 	  
 	table{
 		table-layout: auto;
+	}
+    .gridProfil{
+        grid-template-columns: 1fr;
+    }
+    .btnSave{
+		margin-left: 0;
 	}
 }

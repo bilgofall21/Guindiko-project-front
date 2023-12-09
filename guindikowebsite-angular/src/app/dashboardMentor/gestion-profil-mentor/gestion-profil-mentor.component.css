@@ -227,7 +227,7 @@ body {
 	padding: 0 16px;
 	height: 100%;
 	border: none;
-	background: rgba(128, 128, 128, 0.446);
+	background: rgba(128, 128, 128, 0.133);
 	border-radius: 36px 0 0 36px;
 	outline: none;
 	width: 100%;
@@ -239,16 +239,17 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: rgba(128, 128, 128, 0.446);
-	color: var(--light);
-	font-size: 18px;
+	background: #00225A;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
 	border: none;
 	outline: none;
 	border-radius: 0 36px 36px 0;
 	cursor: pointer;
 }
 #content nav .notification {
-	font-size: 20px;
+	font-size: 25px;
 	position: relative;
 }
 #content nav .notification .num {
@@ -259,7 +260,7 @@ body {
 	height: 20px;
 	border-radius: 50%;
 	border: 2px solid var(--light);
-	background: var(--red);
+	background: #E68513;
 	color: var(--light);
 	font-weight: 700;
 	font-size: 12px;
@@ -564,6 +565,15 @@ body {
 	color: white;
 	font-weight: bold;
 }
+.profilAdmin{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap
+}
+.right-profil input{
+	width: 70%;
+	border: 1px solid #00225A;
+}
 .first{
 	background-color: #00225A;
 	width: 150px;
@@ -602,14 +612,6 @@ body {
 /* MAIN */
 /* CONTENT */
 
-
-
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
 	#sidebar {
 		width: 200px;
@@ -626,12 +628,14 @@ body {
     #sidebar .brand{
         display: none;
     }
+	.pwd{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.first, .second{
+		display: none;
+	}
 }
-
-
-
-
-
 
 @media screen and (max-width: 576px) {
 	#content nav form .form-input input {
@@ -679,4 +683,11 @@ body {
     #sidebar .brand{
         display: none;
     }
+	.pwd{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.first, .second{
+		display: none;
+	}
 }

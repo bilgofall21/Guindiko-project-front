@@ -18,33 +18,32 @@
     <div class="brand mt-1" id="brand">
         <span class="text text-white"><img src="assets/dashboard/logofooter.png" alt=""></span>
         <div class="ms-3">
-          <p class="mt-3" style="font-size: 18px;">Véro M G D</p>
-          <p style="font-size: 16px;">en ligne</p>
-
+          <p class="mt-3" style="font-size: 16px;">Véro M G D</p>
+          <p style="font-size: 14px;">en ligne</p>
         </div>
     </div>
 		<ul class="side-menu top">
 			<li class="active">
 				<a >
-					<i class='bx bxs-dashboard' ></i>
+					<i class='bx bxs-dashboard' [routerLink]="['/dashboardmentor']"></i>
 					<span class="text" [routerLink]="['/dashboardmentor']">Dashboard</span>
 				</a>
 			</li>
 			<li>
 				<a>
-					<i class='bx bxs-shopping-bag-alt' ></i>
+					<i class='bx bxs-shopping-bag-alt' [routerLink]="['/gestion-contenu-mentor']"></i>
 					<span class="text" [routerLink]="['/gestion-contenu-mentor']">Gestion contenu</span>
 				</a>
 			</li>
 			<li>
 				<a >
-					<i class='bx bxs-doughnut-chart' ></i>
+					<i class='bx bxs-doughnut-chart' [routerLink]="['/gestion-demande']"></i>
 					<span class="text" [routerLink]="['/gestion-demande']">Gestion demandes</span>
 				</a>
 			</li>
 			<li>
 				<a >
-		      <i class='bx bxs-message-dots' ></i>
+		      <i class='bx bxs-message-dots' [routerLink]="['/gestion-profil-mentor']"></i>
 					<span class="text" [routerLink]="['/gestion-profil-mentor']">Gestion profil</span>
 				</a>
 			</li>
@@ -120,7 +119,7 @@
                 <h3>Articles récents</h3>
                 <div class="line text-center mb-4"></div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
               <div class="card imgCard" style="width: 18rem;">
                 <img src="https://img.freepik.com/photos-gratuite/concept-controle-qualite-standard-m_23-2150041859.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=sph" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -134,7 +133,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
               <div class="card imgCard" style="width: 18rem;">
                 <img src="https://img.freepik.com/photos-gratuite/portrait-oeil-abstrait-elegance-jeunes-femmes-generee-par-ia_188544-9712.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=sph" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -148,7 +147,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
               <div class="card imgCard" style="width: 18rem;">
                 <img src="https://img.freepik.com/photos-gratuite/homme-affaires-noir-aide-ordinateur-portable_53876-24736.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=ais" class="card-img-top" alt="...">
                 <div class="card-body">

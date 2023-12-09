@@ -7,7 +7,7 @@
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="dashboard.component.css">
+	<link rel="stylesheet" href="dashboardmentore.component.css">
 
 	<title>AdminHub</title>
 </head>
@@ -19,34 +19,22 @@
     <div class="brand mt-1" id="brand">
         <span class="text text-white"><img src="assets/dashboard/logofooter.png" alt=""></span>
         <div class="ms-3">
-          <p class="mt-3" style="font-size: 16px;">Gorgui Amadem FALL</p>
+          <p class="mt-3" style="font-size: 16px;">Dino DIOUF</p>
           <p style="font-size: 14px;">en ligne</p>
 
         </div>
     </div>
 		<ul class="side-menu top">
 			<li class="active">
-				<a >
-					<i class='bx bxs-dashboard' [routerLink]="['/dashboard']"></i>
-					<span class="text" [routerLink]="['/dashboard']">Dashboard</span>
-				</a>
-			</li>
-			<li>
 				<a>
-					<i class='bx bxs-shopping-bag-alt' [routerLink]="['/gestion-contenu']"></i>
-					<span class="text" [routerLink]="['/gestion-contenu']">Gestion contenu</span>
+				    <i class='bx bxs-shopping-bag-alt' [routerLink]="['/gestion-demande-mentore']"></i>
+				    <span class="text" [routerLink]="['/gestion-demande-mentore']">Gestion demande</span>
 				</a>
 			</li>
 			<li>
 				<a >
-					<i class='bx bxs-doughnut-chart' [routerLink]="['/gestion-user']"></i>
-					<span class="text" [routerLink]="['/gestion-user']">Gestion utilisateurs</span>
-				</a>
-			</li>
-			<li>
-				<a >
-		      <i class='bx bxs-message-dots' [routerLink]="['/gestion-profil']"></i>
-					<span class="text" [routerLink]="['/gestion-profil']">Gestion profil</span>
+		      <i class='bx bxs-message-dots' [routerLink]="['/gestion-profil-mentore']"></i>
+					<span class="text" [routerLink]="['/gestion-profil-mentore']">Gestion profil</span>
 				</a>
 			</li>
 		</ul>
@@ -90,38 +78,9 @@
 		<!-- MAIN -->
 		<main>
       <div class="content-wrapper">
-        
-        <div class="carte mt-3">
-          <div class="carte-items d-flex py-3 px-5 rounded">
-            <div class="iconeOffre">
-              <i class="fa-solid fa-user-tie" style="color: #E68513; font-size: 50px;"></i>
-            </div>
-          <div class="ml-5">
-            <p style="font-size: 30px; font-weight: bold;">Mentor</p>
-            <p class="mt-3" style="font-size: 35px;">0</p>
-          </div>
-          </div>
-          <div class="carte-items d-flex py-3 px-5 rounded">
-            <i class="fa-solid fa-user" style="color: #E68513; font-size: 50px;"></i>
-          <div class="ml-5">
-            <p style="font-size: 30px; font-weight: bold;">Mentoré</p>
-            <p class="mt-3" style="font-size: 35px;">0</p>
-          </div>
-          </div>
-          <div class="carte-items d-flex py-3 px-5 rounded" >
-            <div class="iconeOffre">
-              <i class="fa-regular fa-newspaper" style="color: #E68513; font-size: 50px;"></i>
-            </div>
-          <div class="ml-5">
-            <p style="font-size: 30px; font-weight: bold;">Article</p>
-            <p class="mt-3" style="font-size: 35px;">0</p>
-          </div>
-          </div>
-        </div>
-        
         <div class="">
           <div class="d-flex flex-wrap justify-content-between">
-            <h5 class="card-title allUser text-white py-2 px-2 mt-4">Utilisateurs récents</h5>
+            <h2 class="card-title py-2 px-2 mt-4">Listes des demandes</h2>
           </div>
         <div class="row my-5 tab">
           <div class="col-lg-12 d-flex grid-margin stretch-card tabItem">

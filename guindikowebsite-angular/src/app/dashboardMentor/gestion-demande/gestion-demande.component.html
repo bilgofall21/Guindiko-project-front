@@ -19,33 +19,32 @@
     <div class="brand mt-1" id="brand">
         <span class="text text-white"><img src="assets/dashboard/logofooter.png" alt=""></span>
         <div class="ms-3">
-          <p class="mt-3" style="font-size: 18px;">Véro M G D</p>
-          <p style="font-size: 16px;">en ligne</p>
-
+          <p class="mt-3" style="font-size: 16px;">Véro M G D</p>
+          <p style="font-size: 14px;">en ligne</p>
         </div>
     </div>
 		<ul class="side-menu top">
 			<li class="active">
 				<a >
-					<i class='bx bxs-dashboard' ></i>
+					<i class='bx bxs-dashboard' [routerLink]="['/dashboardmentor']"></i>
 					<span class="text" [routerLink]="['/dashboardmentor']">Dashboard</span>
 				</a>
 			</li>
 			<li>
 				<a>
-					<i class='bx bxs-shopping-bag-alt' ></i>
+					<i class='bx bxs-shopping-bag-alt' [routerLink]="['/gestion-contenu-mentor']"></i>
 					<span class="text" [routerLink]="['/gestion-contenu-mentor']">Gestion contenu</span>
 				</a>
 			</li>
 			<li>
 				<a >
-					<i class='bx bxs-doughnut-chart' ></i>
+					<i class='bx bxs-doughnut-chart' [routerLink]="['/gestion-demande']"></i>
 					<span class="text" [routerLink]="['/gestion-demande']">Gestion demandes</span>
 				</a>
 			</li>
 			<li>
 				<a >
-		      <i class='bx bxs-message-dots' ></i>
+		      <i class='bx bxs-message-dots' [routerLink]="['/gestion-profil-mentor']"></i>
 					<span class="text" [routerLink]="['/gestion-profil-mentor']">Gestion profil</span>
 				</a>
 			</li>
@@ -61,8 +60,6 @@
 		</ul>
 	</section>
 	<!-- SIDEBAR -->
-
-
 
 	<!-- CONTENT -->
 	<section id="content">
@@ -89,162 +86,330 @@
 
 		<!-- MAIN -->
 		<main>
-      <div class="content-wrapper">
-        <div class="d-flex flex-wrap">
-            <button class="btnFirst">Nouvelles demandes</button>
-            <button class="btnSecond ms-5">Toutes les demandes</button>
-        </div>
-      </div>
-      <div class="row my-5 tab">
-        <div class="col-lg-12 d-flex grid-margin stretch-card tabItem">
-          <div class="card tabCard w-100">
-            <div class="card-body tardTab">
-              <div class="table-responsive">
-                <table class="table">
-                  <thead >
-                    <tr class="trHead">
-                      <td class="">Nom</td>
-                      <td class="">Prénom</td>
-                      <td class="">Numéro</td>
-                      <td class="">Username</td>
-                      <td class="">Rôle</td>
-                      <td class="">Action</td>
-                    </tr>
-                  </thead>
-                  <tbody >
-                    <tr class="tableBody mt-5">
-                      <td>
-                        <div>FALL</div>
-                      </td>
-                      <td>
-                        <div>Amadem</div>
-                      </td>
-                      <td>
-                        <div>77 777 77 77</div>
-                      </td>
-                      <td>
-                        <div>sasuke</div>
-                      </td>
-                      <td>
-                        <div>Mentor</div>
-                      </td>
-                      <td>
-                        <div>
-                          <i class="fa-solid fa-eye me-3" style="color: #E68513;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-                          <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
-                          <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
+      <div class="container-fluid populer-news py-5">
+          <div class="container py-5">
+              <div class="tab-class mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-md-between border-bottom mb-4">
+                  <ul class="nav nav-pills d-inline-flex text-center">
+                    <li class="nav-item mb-3">
+                      <a class="d-flex py-1 px-1 first active me-2" data-bs-toggle="pill" href="#tab-1">
+                        <span class="text-white">Nouvelles demandes</span>
+                      </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                      <a class="d-flex py-1 px-1 second me-2" data-bs-toggle="pill" href="#tab-2">
+                        <span class="text-dark">Toutes les demandes</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content mb-4">
+                  <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="row my-5 tab">
+                      <div class="col-lg-12 d-flex grid-margin stretch-card tabItem">
+                        <div class="card tabCard w-100">
+                          <div class="card-body tardTab">
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead >
+                                  <tr class="trHead">
+                                    <td class="">Nom</td>
+                                    <td class="">Prénom</td>
+                                    <td class="">Numéro</td>
+                                    <td class="">Username</td>
+                                    <td class="">Rôle</td>
+                                    <td class="">Action</td>
+                                  </tr>
+                                </thead>
+                                <tbody >
+                                  <tr class="tableBody mt-5">
+                                    <td>
+                                      <div>FALL</div>
+                                    </td>
+                                    <td>
+                                      <div>Amadem</div>
+                                    </td>
+                                    <td>
+                                      <div>77 777 77 77</div>
+                                    </td>
+                                    <td>
+                                      <div>sasuke</div>
+                                    </td>
+                                    <td>
+                                      <div>Mentor</div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <i class="fa-solid fa-eye me-3" style="color: #E68513;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                                        <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
+                                        <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr class="tableBody mt-5">
+                                    <td>
+                                      <div>DIATTA</div>
+                                    </td>
+                                    <td>
+                                      <div>Véronique</div>
+                                    </td>
+                                    <td>
+                                      <div>77 777 77 78</div>
+                                    </td>
+                                    <td>
+                                      <div>nikagege</div>
+                                    </td>
+                                    <td>
+                                      <div>Mentor</div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <i class="fa-solid fa-eye me-3" style="color: #E68513;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                                        <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
+                                        <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr class="tableBody mt-5">
+                                    <td>
+                                      <div>DIOUF</div>
+                                    </td>
+                                    <td>
+                                      <div>Astou</div>
+                                    </td>
+                                    <td>
+                                      <div>77 777 77 79</div>
+                                    </td>
+                                    <td>
+                                      <div>ayoudiouf</div>
+                                    </td>
+                                    <td>
+                                      <div>Mentoré</div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <i class="fa-solid fa-eye me-3" style="color: #E68513;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                                        <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
+                                        <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr class="tableBody mt-5">
+                                    <td>
+                                      <div>DIOUF</div>
+                                    </td>
+                                    <td>
+                                      <div>Astou</div>
+                                    </td>
+                                    <td>
+                                      <div>77 777 77 79</div>
+                                    </td>
+                                    <td>
+                                      <div>ayoudiouf</div>
+                                    </td>
+                                    <td>
+                                      <div>Mentoré</div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <i class="fa-solid fa-eye me-3" style="color: #E68513;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                                        <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
+                                        <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr class="tableBody mt-5">
+                                    <td>
+                                      <div>DIOUF</div>
+                                    </td>
+                                    <td>
+                                      <div>Astou</div>
+                                    </td>
+                                    <td>
+                                      <div>77 777 77 79</div>
+                                    </td>
+                                    <td>
+                                      <div>ayoudiouf</div>
+                                    </td>
+                                    <td>
+                                      <div>Mentoré</div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <i class="fa-solid fa-eye me-3" style="color: #E68513;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                                        <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
+                                        <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
                         </div>
-                      </td>
-                    </tr>
-                    <tr class="tableBody mt-5">
-                      <td>
-                        <div>DIATTA</div>
-                      </td>
-                      <td>
-                        <div>Véronique</div>
-                      </td>
-                      <td>
-                        <div>77 777 77 78</div>
-                      </td>
-                      <td>
-                        <div>nikagege</div>
-                      </td>
-                      <td>
-                        <div>Mentor</div>
-                      </td>
-                      <td>
-                        <div>
-                          <i class="fa-solid fa-eye me-3" style="color: #E68513;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-                          <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
-                          <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="tab-2" class="tab-pane fade show p-0">
+                    <div class="row my-5 tab">
+                      <div class="col-lg-12 d-flex grid-margin stretch-card tabItem">
+                        <div class="card tabCard w-100">
+                          <div class="card-body tardTab">
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead >
+                                  <tr class="trHead">
+                                    <td class="">Nom</td>
+                                    <td class="">Prénom</td>
+                                    <td class="">Numéro</td>
+                                    <td class="">Username</td>
+                                    <td class="">Rôle</td>
+                                    <td class="">Action</td>
+                                    <td class="">Date</td>
+                                  </tr>
+                                </thead>
+                                <tbody >
+                                  <tr class="tableBody mt-5">
+                                    <td>
+                                      <div>FALL</div>
+                                    </td>
+                                    <td>
+                                      <div>Amadem</div>
+                                    </td>
+                                    <td>
+                                      <div>77 777 77 77</div>
+                                    </td>
+                                    <td>
+                                      <div>sasuke</div>
+                                    </td>
+                                    <td>
+                                      <div>Mentor</div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div>09/12/2023</div>
+                                    </td>
+                                  </tr>
+                                  <tr class="tableBody mt-5">
+                                    <td>
+                                      <div>DIATTA</div>
+                                    </td>
+                                    <td>
+                                      <div>Véronique</div>
+                                    </td>
+                                    <td>
+                                      <div>77 777 77 78</div>
+                                    </td>
+                                    <td>
+                                      <div>nikagege</div>
+                                    </td>
+                                    <td>
+                                      <div>Mentor</div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div>20/11/2023</div>
+                                    </td>
+                                  </tr>
+                                  <tr class="tableBody mt-5">
+                                    <td>
+                                      <div>DIOUF</div>
+                                    </td>
+                                    <td>
+                                      <div>Astou</div>
+                                    </td>
+                                    <td>
+                                      <div>77 777 77 79</div>
+                                    </td>
+                                    <td>
+                                      <div>ayoudiouf</div>
+                                    </td>
+                                    <td>
+                                      <div>Mentoré</div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div>16/11/2023</div>
+                                    </td>
+                                  </tr>
+                                  <tr class="tableBody mt-5">
+                                    <td>
+                                      <div>DIOUF</div>
+                                    </td>
+                                    <td>
+                                      <div>Astou</div>
+                                    </td>
+                                    <td>
+                                      <div>77 777 77 79</div>
+                                    </td>
+                                    <td>
+                                      <div>ayoudiouf</div>
+                                    </td>
+                                    <td>
+                                      <div>Mentoré</div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div>10/11/2023</div>
+                                    </td>
+                                  </tr>
+                                  <tr class="tableBody mt-5">
+                                    <td>
+                                      <div>DIOUF</div>
+                                    </td>
+                                    <td>
+                                      <div>Astou</div>
+                                    </td>
+                                    <td>
+                                      <div>77 777 77 79</div>
+                                    </td>
+                                    <td>
+                                      <div>ayoudiouf</div>
+                                    </td>
+                                    <td>
+                                      <div>Mentoré</div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div>30/10/2023</div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
                         </div>
-                      </td>
-                    </tr>
-                    <tr class="tableBody mt-5">
-                      <td>
-                        <div>DIOUF</div>
-                      </td>
-                      <td>
-                        <div>Astou</div>
-                      </td>
-                      <td>
-                        <div>77 777 77 79</div>
-                      </td>
-                      <td>
-                        <div>ayoudiouf</div>
-                      </td>
-                      <td>
-                        <div>Mentoré</div>
-                      </td>
-                      <td>
-                        <div>
-                          <i class="fa-solid fa-eye me-3" style="color: #E68513;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-                          <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
-                          <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="tableBody mt-5">
-                      <td>
-                        <div>DIOUF</div>
-                      </td>
-                      <td>
-                        <div>Astou</div>
-                      </td>
-                      <td>
-                        <div>77 777 77 79</div>
-                      </td>
-                      <td>
-                        <div>ayoudiouf</div>
-                      </td>
-                      <td>
-                        <div>Mentoré</div>
-                      </td>
-                      <td>
-                        <div>
-                          <i class="fa-solid fa-eye me-3" style="color: #E68513;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-                          <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
-                          <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="tableBody mt-5">
-                      <td>
-                        <div>DIOUF</div>
-                      </td>
-                      <td>
-                        <div>Astou</div>
-                      </td>
-                      <td>
-                        <div>77 777 77 79</div>
-                      </td>
-                      <td>
-                        <div>ayoudiouf</div>
-                      </td>
-                      <td>
-                        <div>Mentoré</div>
-                      </td>
-                      <td>
-                        <div>
-                          <i class="fa-solid fa-eye me-3" style="color: #E68513;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-                          <i class="fa-solid fa-square-check me-3" style="color: #E68513;"></i>
-                          <i class="fa-regular fa-circle-xmark me-3" style="color: #E68513;"></i>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-
-		</main>
+    </main>
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
-	
 	<script src="script.js"></script>
 </body>
 </html>

@@ -227,7 +227,7 @@ body {
 	padding: 0 16px;
 	height: 100%;
 	border: none;
-	background: rgba(128, 128, 128, 0.446);
+	background: rgba(128, 128, 128, 0.133);
 	border-radius: 36px 0 0 36px;
 	outline: none;
 	width: 100%;
@@ -239,9 +239,10 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: rgba(128, 128, 128, 0.446);
-	color: var(--light);
-	font-size: 18px;
+	background: #00225A;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
 	border: none;
 	outline: none;
 	border-radius: 0 36px 36px 0;
@@ -594,6 +595,13 @@ body {
     #sidebar .brand{
         display: none;
     }
+	.cardsAticle .card{
+		margin: 0 auto;
+	}
+	.cardsAticle .card{
+		margin: 10px auto;
+
+	}
 }
 
 
@@ -647,4 +655,11 @@ body {
     #sidebar .brand{
         display: none;
     }
+	.cardsAticle .card{
+		margin: 0 auto;
+	}
+	.cardsAticle .card{
+		margin: 10px auto;
+
+	}
 }

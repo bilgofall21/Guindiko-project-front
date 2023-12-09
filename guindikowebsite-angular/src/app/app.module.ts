@@ -11,6 +11,9 @@ import { GestionDemandeComponent } from './dashboardMentor/gestion-demande/gesti
 import { DashboardmentorComponent } from './dashboardMentor/dashboardmentor/dashboardmentor.component';
 import { GestionProfilMentorComponent } from './dashboardMentor/gestion-profil-mentor/gestion-profil-mentor.component';
 import { GestionContenuMentorComponent } from './dashboardMentor/gestion-contenu-mentor/gestion-contenu-mentor.component';
+import { DashboardmentoreComponent } from './dashboardMentore/dashboardmentore/dashboardmentore.component';
+import { GestionProfilMentoreComponent } from './dashboardMentore/gestion-profil-mentore/gestion-profil-mentore.component';
+import { GestionDemandeMentoreComponent } from './dashboardMentore/gestion-demande-mentore/gestion-demande-mentore.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { GestionContenuMentorComponent } from './dashboardMentor/gestion-contenu
     GestionDemandeComponent,
     DashboardmentorComponent,
     GestionProfilMentorComponent,
-    GestionContenuMentorComponent
+    GestionContenuMentorComponent,
+    DashboardmentoreComponent,
+    GestionProfilMentoreComponent,
+    GestionDemandeMentoreComponent
   ],
   imports: [
     BrowserModule,
