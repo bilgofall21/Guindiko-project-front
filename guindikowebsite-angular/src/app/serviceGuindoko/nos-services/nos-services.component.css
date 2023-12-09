@@ -8,10 +8,19 @@
 #divTitre{
   /* justify-content: center; */
   justify-content: center;
+
 }
 #titre{
-  border-bottom: 2px solid #E68513;
+  /* border-bottom: 2px solid #E68513; */
+  text-align: center;
 }
+#souligneTitre{
+  height: 5px;
+  margin: 0 auto;
+  width: 15%;
+  background-color: #E68513;
+}
+
 #boutton{
   background-color: #00225A;
   color: #ffffff;
@@ -37,6 +46,9 @@
 #baniere{
   height: 60vh;
   width: 100%;
+  background-image: url('../../../assets/fullProject/imgServive/Standard quality control concept m.png');
+
+  /* background-image: "url('../../../assets/fullProject/imgServive/Standard quality control concept m.png')"; */
 }
 #rechercheTitre{
   display: flex;

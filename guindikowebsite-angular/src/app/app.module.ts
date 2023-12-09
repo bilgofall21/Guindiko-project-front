@@ -17,6 +17,7 @@ import { HeaderComponent } from './header-footer/header/header.component';
 import { FooterComponent } from './header-footer/footer/footer.component';
 import { BgColorBlueguindikoDirective } from './bg-color-blueguindiko.directive';
 import { BgColorOrangeguindikoDirective } from './bg-color-orangeguindiko.directive';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { BgColorOrangeguindikoDirective } from './bg-color-orangeguindiko.direct
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
