@@ -24,6 +24,9 @@ import { ArticleHomeComponent } from './page-articles/article-home/article-home.
 import { DetailsArticleComponent } from './page-articles/details-article/details-article.component';
 import { FormsModule } from '@angular/forms';
 
+import { AuthComponent } from './auth/auth.component';
+import { AProposComponent } from './a-propos/a-propos.component';
+import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { FormsModule } from '@angular/forms';
     ListesMentorComponent,
     ProfilMentorComponent,
     ArticleHomeComponent,
-    DetailsArticleComponent
+    DetailsArticleComponent,
+    AuthComponent,
+    AProposComponent,
+    PolitiqueDeConfidentialiteComponent
   ],
   imports: [
     BrowserModule,

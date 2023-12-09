@@ -11,11 +11,16 @@ import { DetailTechniqueComponent } from './serviceGuindoko/detail-technique/det
 import { DetailArtComponent } from './serviceGuindoko/detail-art/detail-art.component';
 import { DetailGestionManagementComponent } from './serviceGuindoko/detail-gestion-management/detail-gestion-management.component';
 import { DetailScienceComponent } from './serviceGuindoko/detail-science/detail-science.component';
+import { AProposComponent } from './a-propos/a-propos.component';
+import { ContactComponent } from './contact/contact.component';
 const routes: Routes = [
   {path : '', component : AccueilComponent,},
   {path : 'listes-mentor', component :ListesMentorComponent,},
   {path : 'article-home' , component : ArticleHomeComponent,},
   {path : 'details-article', component : DetailsArticleComponent,},
+  {path : 'nos-services', component : NosServicesComponent,},
+  {path : 'a-propos', component : AProposComponent,},
+  {path : 'contact', component : ContactComponent,},
   { path: 'retourService', component: NosServicesComponent},
   {path:'detailInformatique', component:DetailInformatiqueComponent},
   {path:'detailHotellerie', component:DetailHotellerieComponent},

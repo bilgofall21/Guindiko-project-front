@@ -1,0 +1,75 @@
+<div class=" container " id="form-first">
+  <div class="first-form  d-flex justify-content-between">
+  <div class=" col-lg-6" id="img-contain" >
+      <img  src="../../assets/img-connexion/femme-affaires-attrayant-bras-croises_13339-12510.avif" alt="">
+  </div>
+  <div class=" col-lg-6 border-2 " style="background-color: #00225A;" id="seconde-part-contain" *ngIf="afficherBloc1">
+        <div class="d-flex justify-content-around pt my-5">
+          <p id="description" style="color: #E68513; font-size: 20px;"><strong>Connexion</strong></p>
+          <div id="icon " style="color: #E68513;">
+            <i class="bi bi-facebook"></i>
+            <i class="fa-brands fa-twitter ms-3"></i>
+          </div>
+
+      </div>
+
+      <form action="" class="mt-5">
+          <div class="mb-3" style="margin-right: 40px;">
+            <label for="exampleFormControlInput1" class="form-label text-white">Nom d'utilisateur/Email</label>
+            <input type="email" class="form-control w-100 " name="monChamp1" id="exampleFormControlInput1 " placeholder="nom utilisateur/email" >
+          </div>
+
+          <div class="mb-3" style="margin-right: 40px;">
+            <label for="passwordExemple" class="form-label text-white">Mot de passe</label>
+            <input type="password" class="form-control w-100" name="monChamp2" id="passwordExemple" placeholder="mot de pass" >
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="text-white" id="btn-login" style="background-color: #E68513;  border-radius: 5px;" (click)="verifierLogin();">Se connecter</button>
+              <p class="para text-white">Mot de pass oubier</p>
+              <button id="btn-btn" (click)="basculerBlocs(); ">Nouveau Utilisateur? S'enregistrer</button>
+          </div>
+        </form>
+      </div>
+
+  </div>
+
+</div>
+
+
+<div class="" id="form-seconde" *ngIf="!afficherBloc1">
+  <div class="d-flex justify-content-around pt ">
+    <p class="text-center" id="inscription my-5" style="color: #E68513; font-size: 20px;"><strong>Inscription</strong></p>
+    <div id="icon " style="color: #E68513;">
+      <i class="bi bi-facebook"></i>
+      <i class="fa-brands fa-twitter ms-3"></i>
+    </div>
+  </div>
+
+  <form action="">
+      <div class="mb-3">
+        <label for="nameInput1" class="form-label text-white">Nom</label>
+        <input type="text" class="form-control w-75"  name="monChamp3" id="nameInput1" placeholder="votre nom de famille">
+      </div>
+      <div class="mt-3">
+          <label for="nameInput2" class="form-label text-white">Prenom</label>
+          <input type="tel" class="form-control w-75"name="monChamp4" id="nameInput2" placeholder="votre prenom">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label text-white">Nom d'utilisateur/Email</label>
+          <input type="email" class="form-control w-75" name="monChamp5" id="exampleFormControlInput1" >
+        </div>
+
+      <div class="mb-3">
+        <label for="passwordExemple" class="form-label text-white">Mot de pass</label>
+        <input type="password" class="form-control w-75" name="monChamp6" id="passwordExemple">
+      </div>
+      <div class="mb-3">
+        <label for="passwordExemple" class="form-label text-white">confirmer mot de passe</label>
+        <input type="password" class="form-control w-75" name="monChamp7" id="passwordExemple" >
+      </div>
+      <div class="col-auto">
+        <button type="submit"  style=" background-color: #E68513; border-radius: 5px;" class="  text-white mb-3"  id="btn-login" (click)="verifierRegister()">Connecter</button>
+      </div>
+    </form>
+
+  </div>
