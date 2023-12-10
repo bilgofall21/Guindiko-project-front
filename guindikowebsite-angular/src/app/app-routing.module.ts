@@ -5,9 +5,9 @@ import { AProposComponent } from './a-propos/a-propos.component';
 import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
 
 const routes: Routes = [
-  // {path: 'a-propos', component:AProposComponent},
-  // {path: 'auth', component:AuthComponent},
-  // {path: 'politique-de-confidentialite', component:PolitiqueDeConfidentialiteComponent},
+  {path: 'a-propos', component:AProposComponent},
+  {path: 'auth', component:AuthComponent},
+  {path: 'politique-de-confidentialite', component:PolitiqueDeConfidentialiteComponent},
 ];
 
 @NgModule({
