@@ -79,6 +79,8 @@ import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidential
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
