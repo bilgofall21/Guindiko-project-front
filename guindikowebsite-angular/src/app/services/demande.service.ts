@@ -9,7 +9,7 @@ import { Demande } from '../models/Demande';
 })
 export class DemandeService {
   private url="https://guindiko.mouhamadoufaye.tech/api"
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
   // Liste
   getDemandes() : Observable<any>{
     return this.http.get<Demande[]>(`${this.url}/listerDemande`);

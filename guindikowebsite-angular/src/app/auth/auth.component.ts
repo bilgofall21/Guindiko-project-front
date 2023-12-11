@@ -72,8 +72,6 @@ export class AuthComponent implements OnInit {
         text: 'Connexion faite avec succès',
       })
       this.showForm()
-
-
     }
 
   }
