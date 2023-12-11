@@ -11,4 +11,7 @@ export class GestionDemandeComponent {
     script.src = '../../../assets/js/script.js';
     document.body.appendChild(script);
   }
+  
+
+
 }
