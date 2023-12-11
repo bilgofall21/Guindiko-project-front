@@ -38,6 +38,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthComponent } from './auth/auth.component';
 import { AProposComponent } from './a-propos/a-propos.component';
 import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -73,12 +74,13 @@ import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidential
     GestionContenuMentorComponent,
     DashboardmentoreComponent,
     GestionProfilMentoreComponent,
-    GestionDemandeMentoreComponent
+    GestionDemandeMentoreComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
 
 
   ],
