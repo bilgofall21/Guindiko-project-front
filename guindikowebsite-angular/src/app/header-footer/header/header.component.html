@@ -10,11 +10,11 @@
               </div>
                   <div class="h-100 d-inline-flex align-items-center text-white py-2 me-4">
                     <i class="fa-solid fa-location-dot me-2" style="color :white"></i>
-                      <p class="mb-0">info@example.com</p>
+                      <p class="mb-0">hhhhexample.com</p>
                   </div>
                   <div class="h-100 text-white d-inline-flex align-items-center py-2 me-4">
                       <i class="fa fa-envelope  me-2" style="color :white"></i>
-                      <p class="mb-0">info@example.com</p>
+                      <p class="mb-0">infoexample.com</p>
                   </div>
 
               </div>
@@ -37,17 +37,17 @@
               <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                   <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse justify-content-between px-5" id="navbarCollapse">
+              <div class="collapse navbar-collapse justify-content-between px-5" id="navbarCollapse" >
                   <div class="" id="logomenu1">
                     <img src="assets\header-footer\guiniko logo.png" alt="">
                   </div>
                   <div class="navbar-nav mr-auto py-0" id="navigation">
                       <a href="index.html" class="nav-item  nav-link">Accueil</a>
-                      <a href="about.html" class="nav-item nav-link">A propos</a>
-                      <a href="service.html" class="nav-item nav-link">Contact</a>
-                      <a href="service.html" class="nav-item nav-link">Services</a>
-                      <a href="room.html" class="nav-item nav-link">Mentor</a>
-                      <a href="room.html" class="nav-item nav-link">Articles</a>
+                      <a [routerLink]="['/a-propos']" class="nav-item nav-link">A propos</a>
+                      <a [routerLink]="['/contact']" class="nav-item nav-link">Contact</a>
+                      <a [routerLink]="['/nos-services']" class="nav-item nav-link">Services</a>
+                      <a [routerLink]="['/listes-mentor']" class="nav-item nav-link">Mentor</a>
+                      <a [routerLink]="['/article-home']" class="nav-item nav-link">Articles</a>
                   </div>
                   <a href="" class="btn  rounded-0 py-4 px-md-5 d-none d-lg-block"><i class="fa-solid fa-user"  style="color : #00225A"></i></a>
               </div>
