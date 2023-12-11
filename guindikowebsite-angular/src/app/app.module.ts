@@ -33,11 +33,12 @@ import { ListesMentorComponent } from './mentor/listes-mentor/listes-mentor.comp
 import { ProfilMentorComponent } from './mentor/profil-mentor/profil-mentor.component';
 import { ArticleHomeComponent } from './page-articles/article-home/article-home.component';
 import { DetailsArticleComponent } from './page-articles/details-article/details-article.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AuthComponent } from './auth/auth.component';
 import { AProposComponent } from './a-propos/a-propos.component';
 import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -73,13 +74,14 @@ import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidential
     GestionContenuMentorComponent,
     DashboardmentoreComponent,
     GestionProfilMentoreComponent,
-    GestionDemandeMentoreComponent
+    GestionDemandeMentoreComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-
+    HttpClientModule,
+    ReactiveFormsModule,
 
   ],
   providers: [],
