@@ -44,8 +44,8 @@ export class GestionContenuComponent {
     ngOnInit(): void {
       const script = document.createElement('script');
       script.src = '../../../assets/js/script.js';
-      document.body.appendChild(script);    
-      
+      document.body.appendChild(script);
+
       // pour récupérer les domaies stockés
       this.getDomaines();
   }
@@ -60,7 +60,7 @@ export class GestionContenuComponent {
   }
 
   // Méthode pour vider les champs
-    // Methode pour vider les champs 
+    // Methode pour vider les champs
     viderChapms(){
       this.nom = "",
       this.descrip = ""
@@ -90,7 +90,7 @@ export class GestionContenuComponent {
     // Crée une nouvelle instance de Domaine en utilisant l'instance existante
     const domaine: Domaine = this.domaine;
     domaine.nomDomaine = this.nom;
-    domaine.description = this.descrip;    
+    domaine.description = this.descrip;
     return this.domaine;
   }
 
@@ -119,11 +119,11 @@ export class GestionContenuComponent {
    // Méthode pour modifier un domaine spécifique
    modifierDomaine(id: string) {
     const domaineToEdit = this.listeDomaines.find((domaine: Domaine) => domaine._id === id);
-  
+
     if (domaineToEdit) {
       domaineToEdit.nomDomaine = this.nom;
       domaineToEdit.description = this.descrip;
-  
+
       this.domaineService.edit(id, domaineToEdit).subscribe(
         () => {
           this.showAlert("Contact modifié", "", "success");
@@ -138,7 +138,7 @@ export class GestionContenuComponent {
       console.error('Domaine non trouvé pour la modification');
     }
   }
-  
+
       getArticlesPage(): any[] {
     const indexDebut = (this.pageActuelle - 1) * this.articlesParPage;
     const indexFin = indexDebut + this.articlesParPage;
@@ -168,5 +168,5 @@ export class GestionContenuComponent {
       this.getDomaines();
     }
   }
-  
+
 }
