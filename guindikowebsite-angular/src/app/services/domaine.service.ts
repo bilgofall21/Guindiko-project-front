@@ -11,13 +11,13 @@ import { Domaine } from '../models/Domaine';
 export class DomaineService {
 
   constructor(private http:HttpClient) { }
-    // Liste 
+    // Liste
     getDomaines() : Observable<any>{
       return this.http.get<Domaine[]>(`${url}/listerDomaine`);
     }
 
      // geteById
-  getById(id: string) 
+  getById(id: string)
   {
     return this.http.get<Domaine>(`${url}/listerDomaine/`+ id).pipe(
       catchError(error => throwError(error.error.message))
@@ -32,12 +32,12 @@ export class DomaineService {
    updateDomaine(id: string, changes: Partial<Domaine>): Observable<{ message: string }> {
     return this.http.put<{ message: string }>(`${url}/modifierDomaine/${id}`, changes);
   }
-  
-  // Modificacion 
+
+  // Modificacion
   edit(id: string, domaine : Domaine) {
     return this.http.put<{ message: string }>(`${url}/modifierDomaine/` + id, domaine);
   }
-  
+
   // Suppression
   delete(id: string) {
     return this.http.delete<{ message: string }>(`${url}/supprimerDomaine/` + id);
