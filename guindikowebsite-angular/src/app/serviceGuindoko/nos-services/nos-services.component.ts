@@ -52,6 +52,7 @@ export class NosServicesComponent implements OnInit {
   filterValue: string = '';
 element: any;
 originalDomaines: any[] = [];
+errorMessage: string = "Ce domaine n'existe pas.";
 // filterValue: string = '';
 
 ngOnInit(): void {
@@ -78,6 +79,12 @@ onSearch() {
       element.titreDomaine.toLowerCase().includes(this.filterValue.toLowerCase())
     );
   }
+  if (this.domaines.length === 0) {
+    this.errorMessage = "Ce domaine n'existe pas.";
+  } else {
+    this.errorMessage = ''; // Réinitialisez le message s'il y a des éléments trouvés
+  }
 }
 
 }
+
