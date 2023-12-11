@@ -574,6 +574,11 @@ body {
 .text span{
 	cursor: pointer;
 }
+.btnColor{
+	background-color: #00225A;
+	color: white;
+	font-weight: bold;
+}
 /* MAIN */
 /* CONTENT */
 
