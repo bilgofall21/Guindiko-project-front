@@ -24,6 +24,7 @@ import { GestionProfilMentorComponent } from './dashboardMentor/gestion-profil-m
 import { DashboardmentoreComponent } from './dashboardMentore/dashboardmentore/dashboardmentore.component';
 import { GestionDemandeMentoreComponent } from './dashboardMentore/gestion-demande-mentore/gestion-demande-mentore.component';
 import { GestionProfilMentoreComponent } from './dashboardMentore/gestion-profil-mentore/gestion-profil-mentore.component';
+import { DetailcontenuComponent } from './dashboardAdmin/detailcontenu/detailcontenu.component';
 const routes: Routes = [
   // {path : '', component : AccueilComponent,},
   {path : 'listes-mentor', component :ListesMentorComponent,},
@@ -51,6 +52,7 @@ const routes: Routes = [
   {path:'dashboardmentore', component:DashboardmentoreComponent},
   {path:'gestion-demande-mentore', component:GestionDemandeMentoreComponent},
   {path:'gestion-profil-mentore', component:GestionProfilMentoreComponent},
+  {path:'detailarticle/:id', component:DetailcontenuComponent},
 ];
 
 @NgModule({

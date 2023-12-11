@@ -18,11 +18,12 @@ export class GestionContenuComponent {
   nom:string="";
   descrip:string="";
   domaine :Domaine={
-    _id: '',
+    id: '',
     nomDomaine: '',
-    image: '',
+    image: new File([], 'example.jpg'),
     description: '',
     createdAt: '',
+    estArchive: false,
     updatedAt: '',
     createdBy: '',
     updatedBy: ''
@@ -35,6 +36,8 @@ export class GestionContenuComponent {
     // Attribut pour la recherche
     filterValue='';
     filteredElement:any;
+
+    idDomaineAModifier : any;
 
     constructor(
       private domaineService: DomaineService,
@@ -94,50 +97,63 @@ export class GestionContenuComponent {
     return this.domaine;
   }
 
-   // Méthode pour supprimer un domaine
-   deleteDomaine(id: string) {
-    this.domaineService.delete(id).subscribe(() => {
-      // Mettez à jour la liste des domaines après la suppression
-      this.getDomaines();
-      this.showAlert("Succès", "Domaine supprimé avec succès", "success");
-    }, error => {
-      console.error('Erreur lors de la suppression du domaine', error);
-      this.showAlert("Erreur", "Une erreur s'est produite lors de la suppression du domaine", "error");
-    });
-  }
-    // Variable pour stocker le domaine cliqué
-    currentDomaine:any
+  // Variable pour stocker le domaine cliqué
+  currentDomaine:any
 
     // Méthode pour charger les infos du contact à modifier
     chargerInfosDomaine(paramDomaine:any){
+      this.idDomaineAModifier = paramDomaine.id;
+      // this.idDomaineASupprimer = paramDomaine.id;
       this.currentDomaine =paramDomaine ;
       this.nom=paramDomaine.nomDomaine;
       this.descrip = paramDomaine.description;;
     }
 
-    // Méthode pour modifier
-   // Méthode pour modifier un domaine spécifique
-   modifierDomaine(id: string) {
-    const domaineToEdit = this.listeDomaines.find((domaine: Domaine) => domaine._id === id);
-  
+  // Méthode pour supprimer un domaine spécifique
+  supprimerDomaine(idDomaineASupprimer : any) {
+   
+    const domaineToEdit = this.listeDomaines.find((domaine: any) => domaine.id === idDomaineASupprimer);
     if (domaineToEdit) {
-      domaineToEdit.nomDomaine = this.nom;
-      domaineToEdit.description = this.descrip;
-  
-      this.domaineService.edit(id, domaineToEdit).subscribe(
+      console.log("object");
+      console.log(domaineToEdit);
+      // Autres actions à effectuer
+      this.domaineService.archiveDomaine(domaineToEdit.id).subscribe(
         () => {
-          this.showAlert("Contact modifié", "", "success");
-          this.getDomaines(); // Mettre à jour la liste des domaines après modification
+          this.showAlert("Service supprimé", "", "success");
+          this.getDomaines(); 
         },
         (error) => {
-          console.error('Erreur lors de la modification du domaine', error);
-          this.showAlert("Erreur", "Une erreur s'est produite lors de la modification du domaine", "error");
+          console.error('Erreur lors de la suppression du service', error);
+          this.showAlert("Erreur", "Une erreur s'est produite lors de la suppression du service", "error");
         }
       );
-    } else {
-      console.error('Domaine non trouvé pour la modification');
     }
   }
+  
+modifierDomaine() {
+  const domaineToEdit = this.listeDomaines.find((domaine: any) => domaine.id == this.idDomaineAModifier);
+
+  if (domaineToEdit) {
+    domaineToEdit.nomDomaine = this.nom;
+    domaineToEdit.description = this.descrip;
+
+    console.log("Domaine à modifier");
+    console.log(domaineToEdit);
+    this.domaineService.edit(this.idDomaineAModifier, { nomDomaine: this.nom, description: this.descrip }).subscribe(
+      () => {
+        this.showAlert("Domaine modifié", "", "success");
+        this.getDomaines(); // Mettre à jour la liste des domaines après modification
+      },
+      (error) => {
+        console.error('Erreur lors de la modification du domaine', error);
+        this.showAlert("Erreur", "Une erreur s'est produite lors de la modification du domaine", "error");
+      }
+    );
+  } else {
+    console.error('Domaine non trouvé pour la modification');
+  }
+}
+
   
       getArticlesPage(): any[] {
     const indexDebut = (this.pageActuelle - 1) * this.articlesParPage;

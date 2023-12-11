@@ -1,7 +1,9 @@
 export class Message {
-    _id!: string;
+    id!: string;
     contenu!: string;
     fichier!: string;
+    userEnv!: string;
+    userRecup!: string;
     createdAt!: string;
     updatedAt!: string;
     createdBy!: string;

@@ -1,5 +1,6 @@
 export class Commentaire {
-    _id!: string;
+    id!: string;
     contenu!: string;
-    
+    article_id!: string;
+    user_id!: string;
   }

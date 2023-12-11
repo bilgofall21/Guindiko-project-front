@@ -1,5 +1,5 @@
 export class Diplome {
-    _id!: string;
+    id!: string;
     libele!: string;
     fichier!: string;
     description!: string;

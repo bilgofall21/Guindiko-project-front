@@ -19,7 +19,7 @@ export class DomaineService {
      // geteById
   getById(id: string) 
   {
-    return this.http.get<Domaine>(`${url}/listerDomaine/`+ id).pipe(
+    return this.http.get<Domaine>(`${url}/voirDomaine/`+ id).pipe(
       catchError(error => throwError(error.error.message))
     );
   }
@@ -32,14 +32,15 @@ export class DomaineService {
    updateDomaine(id: string, changes: Partial<Domaine>): Observable<{ message: string }> {
     return this.http.put<{ message: string }>(`${url}/modifierDomaine/${id}`, changes);
   }
-  
-  // Modificacion 
-  edit(id: string, domaine : Domaine) {
-    return this.http.put<{ message: string }>(`${url}/modifierDomaine/` + id, domaine);
+
+  edit(id: string, domaine: Partial<Domaine>): Observable<{ message: string }> {
+    return this.http.patch<{ message: string }>(`${url}/modifierDomaine/${id}`, domaine);
   }
-  
-  // Suppression
-  delete(id: string) {
-    return this.http.delete<{ message: string }>(`${url}/supprimerDomaine/` + id);
+
+  // Archiver un domaine en utilisant PATCH
+  archiveDomaine(id: string): Observable<{ message: string }> {
+    const changes = { estArchive: true }; // Mettre à jour estArchive à true pour l'archivage
+    return this.http.patch<{ message: string }>(`${url}/supprimerDomaine/${id}`, changes);
   }
+
 }
