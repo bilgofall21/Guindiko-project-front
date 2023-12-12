@@ -67,14 +67,14 @@ errorMsg: any;
                                                 (user: User) => {
                                                   console.log(user);
 
-                                                  this.userfoundid = user._id;
+                                                  this.userfoundid = user.id;
                                                   let useretat = user.role_id;
 
                                                   if (user) {
                                                     this.affichermessage('success', 'Bienvenu', user.email);
                                                     if (user.role_id == '1' && user.estArchive === false) {
                                                       this.router.navigate(['/dashboard:', this.userfoundid]);
-                                                      this.authen.setUserId(user._id);
+                                                      this.authen.setUserId(user.id);
                                                     } else if (user.role_id == '2' && user.estArchive === false) {
                                                       this.router.navigate(['/dashboardmentor/', this.userfoundid]);
                                                     } else if (user.role_id == '3' && user.estArchive === false) {

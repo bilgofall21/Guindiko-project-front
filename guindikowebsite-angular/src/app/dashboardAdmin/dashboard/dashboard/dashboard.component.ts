@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Domaine } from 'src/app/models/Domaine';
+import { DomaineService } from 'src/app/services/domaine.service';
+// import { Domaine } from 'src/app/models/domaine.model';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -12,7 +15,27 @@ export class DashboardComponent implements OnInit {
     const script = document.createElement('script');
     script.src = '../../../assets/js/script.js';
     document.body.appendChild(script);
+    this.getDomaines();
   }
+
+  listeDomaines: Domaine[] = []; // Initialisez la liste des domaines avec une valeur par défaut vide
+
+  constructor(private domaineService: DomaineService) { }
+
+
+  // ...
+
+  getDomaines(): void {
+    this.domaineService.getDomaines().subscribe(
+      (data: Domaine[]) => {
+        this.listeDomaines = data;
+      },
+      (error) => {
+        console.error('Erreur lors de la récupération des domaines', error);
+      }
+    );
+  }
+
 
   // Fonction sweet alert
   verifInfos(title: any, text: any, icon: any){

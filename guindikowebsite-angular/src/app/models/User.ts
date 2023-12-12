@@ -1,10 +1,11 @@
 export class User {
-    _id!: string;
+    id!: string;
     email!: string;
     password!: string;
     nom!: string;
     prenom!: string;
     role_id !: string;
+    image?: File;
     telephone!: string;
     estArchive!: boolean;
     datedeNaissance!:Date;

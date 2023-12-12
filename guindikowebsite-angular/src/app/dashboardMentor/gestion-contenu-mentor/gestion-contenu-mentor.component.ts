@@ -31,7 +31,7 @@ throw new Error('Method not implemented.');
   domain : string = "";
   listeArticles! : any;
   article : Article ={
-      _id: "",
+      id: "",
       titre: "",
       domaine : "",
       contenu: "",

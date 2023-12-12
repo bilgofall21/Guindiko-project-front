@@ -28,6 +28,7 @@ import { AuthComponent } from './auth/auth.component';
 import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
 import { ProfilMentorComponent } from './mentor/profil-mentor/profil-mentor.component';
 import { ArticleService } from './services/article.service';
+import { DetailcontenuComponent } from './dashboardAdmin/detailcontenu/detailcontenu.component';
 const routes: Routes = [
   {path : '', component : AccueilComponent,},
   {path : 'listes-mentor', component :ListesMentorComponent,},
@@ -63,6 +64,7 @@ const routes: Routes = [
   {path:'dashboardmentore', component:DashboardmentoreComponent},
   {path:'gestion-demande-mentore', component:GestionDemandeMentoreComponent},
   {path:'gestion-profil-mentore', component:GestionProfilMentoreComponent},
+  {path:'detailarticle/:id', component:DetailcontenuComponent},
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 export class Article {
-    _id!: string;
+  id!: string;
     titre!: string;
     domaine! : string;
     contenu!: string;

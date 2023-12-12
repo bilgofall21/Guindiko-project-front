@@ -1,8 +1,10 @@
 export class Evaluation {
-    _id!: string;
+    id!: string;
     message!: string;
     note!: number;
-    // serviceId!: boolean;
+    userMentor_id!: string;
+    userMentore_id!: string;
+    estArchive!:boolean;
     createdAt!: string;
     createdBy!: string;
   }
