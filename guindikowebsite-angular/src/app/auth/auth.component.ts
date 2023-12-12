@@ -76,9 +76,9 @@ errorMsg: any;
                                                       this.router.navigate(['/dashboard:', this.userfoundid]);
                                                       this.authen.setUserId(user.id);
                                                     } else if (user.role_id == '2' && user.estArchive === false) {
-                                                      this.router.navigate(['/dashboardmentor/', this.userfoundid]);
+                                                      this.router.navigate(['/dashboardmentore/', this.userfoundid]);
                                                     } else if (user.role_id == '3' && user.estArchive === false) {
-                                                      this.router.navigate(['/EspaceApprenant/', this.userfoundid]);
+                                                      this.router.navigate(['/dashboardmentor/', this.userfoundid]);
                                                     } else {
                                                       this.affichermessage('Erreur', 'Ce compte a été desactive', 'error');
                                                     }
@@ -96,10 +96,15 @@ errorMsg: any;
                                               this.affichermessage('error', 'Oops', ' Les Informations que vous avez saisies sont incorrectes!');
                                             }
                                           }
-                              affichermessage(arg0: string, arg1: string, email: any) {
-                                throw new Error('Method not implemented.');
-
-                              }
+                                          affichermessage(icone: any, message: string,user:string) {
+                                            Swal.fire({
+                                                position: 'center',
+                                                icon: icone,
+                                                title: message +"" +user,
+                                                showConfirmButton: true,
+                                                // timer: 1500
+                                            })
+                                          }
 
                               // methode d 'enregistrement
 
@@ -117,7 +122,12 @@ errorMsg: any;
                                     // Handle registration error, e.g., show an error message
                                   }
                                 );
+
                               }
+
+
+
+
 
 
   contenu='exemple@gmail.com'

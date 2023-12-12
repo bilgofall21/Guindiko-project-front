@@ -3,6 +3,10 @@
   --orangeguindiko : #E68513;
 }
 
+.pagecontainer{
+  margin-top: 120px;
+}
+
 .banierehome{
   background-image: url(https://www.fasonumerique.com/public/img/a35bfa62eef7369cf99f300c277387d01489ad27.jpg);
   height: 60vh;
