@@ -1,4 +1,7 @@
+
+pagecontainer>
 <app-header></app-header>
+
 <section class="listesmentor">
   <div class="listecontainer">
     <div class="recherche d-flex justify-content-end mt-5">
@@ -65,7 +68,7 @@
                           </div>
                           <div class="text-center mb-2">
 
-                            <button class="btn text-white fw-bold" appBgColorBlueguindiko><i class="fa-regular fa-hand-point-right"></i> Voir profil</button>
+                            <button class="btn text-white fw-bold" appBgColorBlueguindiko  [routerLink]="['/profil-mentor']"><i class="fa-regular fa-hand-point-right"></i> Voir profil</button>
                           </div>
                         </div>
                       </div>
@@ -86,7 +89,7 @@
                           </div>
                           <div class="text-center mb-2">
 
-                            <button class="btn text-white fw-bold" appBgColorBlueguindiko><i class="fa-regular fa-hand-point-right"></i> Voir profil</button>
+                            <button class="btn text-white fw-bold" appBgColorBlueguindiko><i class="fa-regular fa-hand-point-right" [routerLink]="['/profil-mentor']" ></i> Voir profil</button>
                           </div>
                         </div>
                       </div>
@@ -224,4 +227,5 @@
 </section>
 
 <app-footer></app-footer>
+
 

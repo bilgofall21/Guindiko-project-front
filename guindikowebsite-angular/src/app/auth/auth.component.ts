@@ -64,23 +64,28 @@ errorMsg: any;
                                               };
 
                                               this.authen.loginUser(loginData).subscribe(
-                                                (user: User) => {
+                                                (user: any) => {
                                                   console.log(user);
 
-                                                  this.userfoundid = user._id;
-                                                  let useretat = user.role_id;
+                                                  this.userfoundid = user.user.id;
+                                                  let useretat = user.user.role_id;
 
                                                   if (user) {
                                                     this.affichermessage('success', 'Bienvenu', user.email);
-                                                    if (user.role_id == '1' && user.estArchive === false) {
-                                                      this.router.navigate(['/dashboard:', this.userfoundid]);
-                                                      this.authen.setUserId(user._id);
-                                                    } else if (user.role_id == '2' && user.estArchive === false) {
-                                                      this.router.navigate(['/dashboardmentor/', this.userfoundid]);
-                                                    } else if (user.role_id == '3' && user.estArchive === false) {
-                                                      this.router.navigate(['/EspaceApprenant/', this.userfoundid]);
-                                                    } else {
-                                                      this.affichermessage('Erreur', 'Ce compte a été desactive', 'error');
+                                                    // alert(this.userfoundid);
+                                                    if (user.user.role_id == 1 && user.user.estArchive ==0) {
+                                                      this.router.navigate(['/dashboard', this.userfoundid]);
+
+                                                      this.authen.setUserId(user.id);
+                                                    }
+                                                    else if (user.user.role_id == 2 && user.user.estArchive ==0) {
+                                                      this.router.navigate(['/dashboardmentore', this.userfoundid]);
+                                                    }
+                                                    else if (user.user.role_id == 3 && user.user.estArchive ==0) {
+                                                      this.router.navigate(['/dashboardmentor', this.userfoundid]);
+                                                    }
+                                                    else {
+                                                      this.affichermessage('error', 'Ce compte a été desactive', 'error');
                                                     }
                                                   } else {
                                                     this.affichermessage('error', 'Oops', 'Login ou Mot de passe Incorrecte');
@@ -96,10 +101,15 @@ errorMsg: any;
                                               this.affichermessage('error', 'Oops', ' Les Informations que vous avez saisies sont incorrectes!');
                                             }
                                           }
-                              affichermessage(arg0: string, arg1: string, email: any) {
-                                throw new Error('Method not implemented.');
-
-                              }
+                                          affichermessage(icone: any, message: string,user:string) {
+                                            Swal.fire({
+                                                position: 'center',
+                                                icon: icone,
+                                                title: message +"" +user,
+                                                showConfirmButton: true,
+                                                // timer: 1500
+                                            })
+                                          }
 
                               // methode d 'enregistrement
 
@@ -117,7 +127,12 @@ errorMsg: any;
                                     // Handle registration error, e.g., show an error message
                                   }
                                 );
+
                               }
+
+
+
+
 
 
   contenu='exemple@gmail.com'

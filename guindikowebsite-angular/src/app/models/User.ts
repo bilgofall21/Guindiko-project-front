@@ -5,8 +5,10 @@ export class User {
     nom!: string;
     prenom!: string;
     image!: string;
+    role_id !: number;
+    image?: File;
     telephone!: string;
-    estArchive!: boolean;
+    estArchive!: number;
     datedeNaissance!:Date;
     domain_id !:string;
     email_verified_at!: string;

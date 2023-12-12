@@ -117,7 +117,7 @@ export class GestionContenuComponent {
 
   // Méthode pour supprimer un domaine spécifique
   supprimerDomaine(idDomaineASupprimer : any) {
-   
+
     const domaineToEdit = this.listeDomaines.find((domaine: any) => domaine.id === idDomaineASupprimer);
     if (domaineToEdit) {
       console.log("object");
@@ -126,7 +126,7 @@ export class GestionContenuComponent {
       this.domaineService.archiveDomaine(domaineToEdit.id).subscribe(
         () => {
           this.showAlert("Service supprimé", "", "success");
-          this.getDomaines(); 
+          this.getDomaines();
         },
         (error) => {
           console.error('Erreur lors de la suppression du service', error);

@@ -20,7 +20,7 @@ export class AuthGuardService {
       take(1),
       tap(auth => { //auth est true ou false c la val de isAuth$ ki est un observable en quelque sorte
         if (!auth) {
-          this.router.navigate(['/login']);
+          this.router.navigate(['/app-auth']);
         }
       })
     );

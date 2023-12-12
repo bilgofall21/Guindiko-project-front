@@ -1,4 +1,4 @@
-<div class=" container  bg-danger" id="form-first">
+<div class=" container  " id="form-first">
   <div class="first-form   d-flex justify-content-between">
   <div class=" col-lg-6" id="img-contain" >
       <img  src="../../assets/img-connexion/femme-affaires-attrayant-bras-croises_13339-12510.avif" alt="">
@@ -33,7 +33,7 @@
             <input type="password" class="form-control " name="password" id="passwordExemple" placeholder="mot de pass" [(ngModel)]="formData.password">
           </div>
 
-            <button type="submit" class=" btn text-white fw-bold" id="btn-login"  appBgColorOrangeguindiko [routerLink]="['/dashboard']" >Se connecter</button>
+            <button type="submit" class=" btn text-white fw-bold" id="btn-login"  appBgColorOrangeguindiko  >Se connecter</button>
               <p class="para text-white mt-2">Mot de pass oubier</p>
               <button class="btn text-white fw-lighter " appBgColorOrangeguindiko (click)="basculerBlocs(); " >Nouveau Utilisateur? S'enregistrer</button>
 
@@ -80,27 +80,28 @@
         </div>
 
         <div class="mb-3 " id="selectoption">
-          <label for="passwordExemple" class="form-label text-white">Domaine</label>
-          <select class="form-select" aria-label="Default select example" [(ngModel)]="registreData.role_id">
-            <option selected>domaine</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          <label for="passwordExemple" class="form-label text-white">profil</label>
+          <select class="form-select" aria-label="Default select example" name="domaine" [(ngModel)]="registreData.role_id">
+            <option selected>Profil</option>
+            <!-- <option value="1">One</option> -->
+            <option value="1">admin</option>
+            <option value="2">mentore</option>
+            <option value="3">mentor</option>
           </select>
         </div>
         <div class="mb-3 " id="selectoption">
-          <label for="passwordExemple" class="form-label text-white">Profil</label >
-          <select class="form-select" aria-label="Default select example" [(ngModel)]="registreData.domaine_id" >
-            <option selected>profil</option>
-            <option value="1">mentor</option>
-            <option value="2">mentore</option>
+          <label for="passwordExemple" class="form-label text-white">Domaine</label >
+          <select class="form-select" aria-label="Default select example"  name="role" [(ngModel)]="registreData.domaine_id" >
+            <option selected>Informatique</option>
+            <option value="2">Science</option>
+            <!-- <option value="3">mentor</option> -->
 
           </select>
         </div>
 
         <div class="mb-3 col-lg-6">
           <label for="passwordExemple" class="form-label text-white">mot de pass</label>
-          <input type="password" class="form-control w-75" name="password" id="passwordExemple">
+          <input type="password" class="form-control w-75" name="password" id="passwordExemple"[(ngModel)]="registreData.password" >
         </div>
 
       <!-- <div class="mb-3 col-lg-6 bg-danger" id="passer">
