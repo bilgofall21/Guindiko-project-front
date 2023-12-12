@@ -41,7 +41,7 @@ const routes: Routes = [
   {path : 'accueil', component : AccueilComponent,},
   {path : 'a-propos', component : AProposComponent,},
   {path : 'contact', component : ContactComponent,},
-  {path : 'politique-de-confidentialite', component : PolitiqueDeConfidentialiteComponent,},
+  {path : 'politique-de-confidentialite',component :PolitiqueDeConfidentialiteComponent},
   {path : 'service', component : NosServicesComponent,},
   {path : 'articles', component : DetailsArticleComponent,},
   {path : 'mentor', component : ListesMentorComponent,},
