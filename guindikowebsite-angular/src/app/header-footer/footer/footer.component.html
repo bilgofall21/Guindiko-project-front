@@ -6,7 +6,7 @@
           <div class="col-lg-6 col-xl-3">
               <div class="footer-item-1 ml-xl-6">
                   <div  id="logofooter">
-                    <img src="assets\header-footer\logofooter.png" alt="">
+                    <a [routerLink]="['/accueil']"><img src="assets\header-footer\logofooter.png" alt="" [routerLink]="['/accueil']"></a>
                   </div>
                   <div class="d-flex line-h mt-4" id="iconecocialfooter">
                     <a class="btn btn-light me-2 btn-md-square rounded-circle" href="" appBgColorOrangeguindiko ><i class="fab fa-facebook-f text-dark text-white"></i></a>
@@ -26,7 +26,7 @@
                   <a [routerLink]="['/accueil']" class="btn-link text-white text-decoration-none" href=""><i class="fas fa-angle-right text-white me-2"></i> Accueil</a>
                   <a [routerLink]="['/a-propos']" class="btn-link text-white text-decoration-none" href=""><i class="fas fa-angle-right text-white me-2"></i> A propos</a>
                   <a [routerLink]="['/contact']" class="btn-link text-white text-decoration-none" href=""><i class="fas fa-angle-right text-white me-2"></i> Contact</a>
-                  <a [routerLink]="['/politique-de-Confidentialite']" class="btn-link text-white text-decoration-none" href=""><i class="fas fa-angle-right text-white me-2"></i> Politique de Confidentialité</a>
+                  <a [routerLink]="['/politique-de-confidentialite']" class="btn-link text-white text-decoration-none" href=""><i class="fas fa-angle-right text-white me-2"></i> Politique de Confidentialité</a>
               </div>
           </div>
           <div class="col-lg-6 col-xl-3">
@@ -39,16 +39,18 @@
           </div>
           <div class="col-md-12 col-lg-3  text-white" id="email">
             <h4>Rester informer</h4>
-              <form >
-                <div class="col-md-10 mb-2">
-                  <label for="mail" class="form-label">S'inscrire a la newsletter</label>
-                  <input class="form-control form-control-sm " type="text" id="mail" placeholder="Email">
-                  <div class="invalid-feedback">Veuillez entrer une adresse e-mail valide.</div>
-                </div>
-                <div class="col-md-5">
-                  <button id="myButton" class="btn form-contro text-white fw-bold" appBgColorOrangeguindiko >S'inscrire</button>
-                </div>
-              </form>
+             <!-- Ajoutez ceci dans votre fichier footer.component.html -->
+<form>
+  <div class="col-md-10 mb-2">
+    <label for="mail" class="form-label">S'inscrire à la newsletter</label>
+    <input class="form-control form-control-sm" type="text" id="mail" placeholder="Email">
+    <div class="invalid-feedback">Veuillez entrer une adresse e-mail valide.</div>
+  </div>
+  <div class="col-md-5">
+    <button class="btn form-contro text-white fw-bold" style="background-color: #e68513;" (click)="soumettreFormulaire()">S'inscrire</button>
+  </div>
+</form>
+
             </div>
       </div>
   </div>

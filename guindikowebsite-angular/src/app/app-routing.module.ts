@@ -44,7 +44,7 @@ const routes: Routes = [
   { path: 'retourService', component: NosServicesComponent},
   {path : 'a-propos', component : AProposComponent,},
   {path : 'contact', component : ContactComponent,},
-  {path : 'politique-de-confidentialite', component : PolitiqueDeConfidentialiteComponent,},
+  {path : 'politique-de-confidentialite',component :PolitiqueDeConfidentialiteComponent},
   {path : 'service', component : NosServicesComponent,},
   {path : 'articles', component : DetailsArticleComponent,},
   {path : 'mentor', component : ListesMentorComponent,},
