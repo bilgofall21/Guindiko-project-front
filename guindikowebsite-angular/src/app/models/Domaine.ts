@@ -7,4 +7,5 @@ export class Domaine {
     updatedAt!: string;
     createdBy!: string;
     updatedBy!: string;
+  // titreDomaine: any;
   }

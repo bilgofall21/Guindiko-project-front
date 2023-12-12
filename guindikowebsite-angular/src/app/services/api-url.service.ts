@@ -1,1 +1,1 @@
-export let url = " https://guindiko.mouhamadoufaye.tech/api";
+export let url = " https://guindiko2.mouhamadoufaye.tech/api";
