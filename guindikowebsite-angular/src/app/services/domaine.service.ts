@@ -11,13 +11,13 @@ import { Domaine } from '../models/Domaine';
 export class DomaineService {
 
   constructor(private http:HttpClient) { }
-    // Liste 
+    // Liste
     getDomaines() : Observable<any>{
       return this.http.get<Domaine[]>(`${url}/listerDomaine`);
     }
 
      // geteById
-  getById(id: string) 
+  getById(id: string)
   {
     return this.http.get<Domaine>(`${url}/voirDomaine/`+ id).pipe(
       catchError(error => throwError(error.error.message))

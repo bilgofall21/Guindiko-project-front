@@ -17,6 +17,7 @@ export class GestionContenuComponent {
   listeDomaines!: any;
   nom:string="";
   descrip:string="";
+  image:string="";
   domaine :Domaine={
     id: '',
     nomDomaine: '',
@@ -47,8 +48,8 @@ export class GestionContenuComponent {
     ngOnInit(): void {
       const script = document.createElement('script');
       script.src = '../../../assets/js/script.js';
-      document.body.appendChild(script);    
-      
+      document.body.appendChild(script);
+
       // pour récupérer les domaies stockés
       this.getDomaines();
   }
@@ -64,10 +65,11 @@ export class GestionContenuComponent {
   }
 
   // Méthode pour vider les champs
-    // Methode pour vider les champs 
+    // Methode pour vider les champs
     viderChapms(){
       this.nom = "",
       this.descrip = ""
+      this.image = ""
     }
 
   // Méthode pour récupérer les données
@@ -95,7 +97,8 @@ export class GestionContenuComponent {
     // Crée une nouvelle instance de Domaine en utilisant l'instance existante
     const domaine: Domaine = this.domaine;
     domaine.nomDomaine = this.nom;
-    domaine.description = this.descrip;    
+    domaine.description = this.descrip;
+    domaine.image = this.image;
     return this.domaine;
   }
 
@@ -108,7 +111,8 @@ export class GestionContenuComponent {
       // this.idDomaineASupprimer = paramDomaine.id;
       this.currentDomaine =paramDomaine ;
       this.nom=paramDomaine.nomDomaine;
-      this.descrip = paramDomaine.description;;
+      this.descrip = paramDomaine.description;
+      this.image = paramDomaine.image;
     }
 
   // Méthode pour supprimer un domaine spécifique
@@ -138,10 +142,11 @@ modifierDomaine() {
   if (domaineToEdit) {
     domaineToEdit.nomDomaine = this.nom;
     domaineToEdit.description = this.descrip;
+    domaineToEdit.image = this.image;
 
     console.log("Domaine à modifier");
     console.log(domaineToEdit);
-    this.domaineService.edit(this.idDomaineAModifier, { nomDomaine: this.nom, description: this.descrip }).subscribe(
+    this.domaineService.edit(this.idDomaineAModifier, { nomDomaine: this.nom, description: this.descrip, image: this.image}).subscribe(
       () => {
         this.showAlert("Domaine modifié", "", "success");
         this.getDomaines(); // Mettre à jour la liste des domaines après modification
@@ -187,5 +192,5 @@ modifierDomaine() {
       this.getDomaines();
     }
   }
-  
+
 }

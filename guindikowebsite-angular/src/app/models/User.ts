@@ -4,13 +4,14 @@ export class User {
     password!: string;
     nom!: string;
     prenom!: string;
-    image?: File;
+    image!: string;
     telephone!: string;
     estArchive!: boolean;
-    username!: string;
     datedeNaissance!:Date;
+    domain_id !:string;
+    email_verified_at!: string;
+    remember_token!:string;
     createdAt!: string;
     updatedAt!: string;
-    createdBy!: string;
-    updatedBy!: string;
+
   }

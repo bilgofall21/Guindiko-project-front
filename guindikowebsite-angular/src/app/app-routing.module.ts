@@ -24,16 +24,31 @@ import { GestionProfilMentorComponent } from './dashboardMentor/gestion-profil-m
 import { DashboardmentoreComponent } from './dashboardMentore/dashboardmentore/dashboardmentore.component';
 import { GestionDemandeMentoreComponent } from './dashboardMentore/gestion-demande-mentore/gestion-demande-mentore.component';
 import { GestionProfilMentoreComponent } from './dashboardMentore/gestion-profil-mentore/gestion-profil-mentore.component';
+<<<<<<< HEAD
 import { DetailcontenuComponent } from './dashboardAdmin/detailcontenu/detailcontenu.component';
+=======
+import { AuthComponent } from './auth/auth.component';
+import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
+import { ProfilMentorComponent } from './mentor/profil-mentor/profil-mentor.component';
+import { ArticleService } from './services/article.service';
+>>>>>>> 116adbd94f84793c7f6587f1f48ac4bcc968b50c
 const routes: Routes = [
-  // {path : '', component : AccueilComponent,},
+  {path : '', component : AccueilComponent,},
   {path : 'listes-mentor', component :ListesMentorComponent,},
   {path : 'article-home' , component : ArticleHomeComponent,},
   {path : 'details-article', component : DetailsArticleComponent,},
   {path : 'nos-services', component : NosServicesComponent,},
   {path : 'a-propos', component : AProposComponent,},
   {path : 'contact', component : ContactComponent,},
+  {path: 'app-auth', component : AuthComponent,},
   { path: 'retourService', component: NosServicesComponent},
+  {path : 'accueil', component : AccueilComponent,},
+  {path : 'a-propos', component : AProposComponent,},
+  {path : 'contact', component : ContactComponent,},
+  {path : 'politique-de-confidentialite', component : PolitiqueDeConfidentialiteComponent,},
+  {path : 'service', component : NosServicesComponent,},
+  {path : 'articles', component : DetailsArticleComponent,},
+  {path : 'mentor', component : ListesMentorComponent,},
   {path:'detailInformatique', component:DetailInformatiqueComponent},
   {path:'detailHotellerie', component:DetailHotellerieComponent},
   {path:'detailTechnique', component:DetailTechniqueComponent},

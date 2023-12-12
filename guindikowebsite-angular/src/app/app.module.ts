@@ -76,7 +76,10 @@ import { DetailcontenuComponent } from './dashboardAdmin/detailcontenu/detailcon
     DashboardmentoreComponent,
     GestionProfilMentoreComponent,
     GestionDemandeMentoreComponent,
+<<<<<<< HEAD
     DetailcontenuComponent
+=======
+>>>>>>> 116adbd94f84793c7f6587f1f48ac4bcc968b50c
   ],
   imports: [
     BrowserModule,

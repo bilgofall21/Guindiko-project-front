@@ -1,5 +1,5 @@
 export class Role {
-    id!: string;
+    _id!: string;
     nom!: string;
     createdAt!: string;
     updatedAt!: string;
