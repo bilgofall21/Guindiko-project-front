@@ -51,7 +51,7 @@ pagecontainer>
                       <hr class="border-2 opacity-100">
                     </div>
                     <div class="row row-cols-1 row-cols-md-3 g-4 mt-4" >
-                      <div class="col" *ngFor=" let element of datalistes">
+                      <div class="col" *ngFor=" let element of getUserPage()">
                         <div class="card" style="width: 18rem;" id="cardmentor" >
                           <img src="https://img.freepik.com/photos-gratuite/vue-face-homme-faisant-presentation-lors-reunion_23-2148817046.jpg?size=626&ext=jpg&ga=GA1.1.2145246215.1689776414&semt=ais" class="card-img-top" alt="...">
                           <div class="card-body">
@@ -79,7 +79,18 @@ pagecontainer>
                   </div>
 
                 </div>
-
+ <!-- pour la pagination -->
+ <div class="d-flex flex-wrap justify-content-center my-5">
+  <button class="btn btnColor me-2" [disabled]="pageActuelle === 1" (click)="pageActuelle = pageActuelle - 1">
+    Précédent
+  </button>
+  <button class="btn btnColor ms-2" *ngFor="let page of pages" (click)="pageActuelle = page">
+    {{ page }}
+  </button>
+  <button class="btn btnColor ms-2" [disabled]="pageActuelle === totalPages" (click)="pageActuelle = pageActuelle + 1">
+    Suivant
+  </button>
+</div>
           </div>
       </div>
   </section>
@@ -121,6 +132,8 @@ pagecontainer>
 
 </div>
 </section>
+
+
 
 <app-footer></app-footer>
 

@@ -30,6 +30,10 @@ export class ListesMentorComponent {
     },
 
   ];
+
+  articlesParPage = 6; // Nombre d'articles par page
+  pageActuelle = 1; // Page actuelle
+
   constructor(private userSER : UserService){};
 
   ngOnInit(): void {
@@ -43,7 +47,23 @@ datalistes : any;
       this.datalistes = data;
     })
   };
-  
+
+  // methode pagination
+  getUserPage(): any[] {
+    const indexDebut = (this.pageActuelle - 1) * this.articlesParPage;
+    const indexFin = indexDebut + this.articlesParPage;
+    return this.datalistes.slice(indexDebut, indexFin);
+  }
+   // Méthode pour générer la liste des pages
+   get pages(): number[] {
+    const totalPages = Math.ceil(this.datalistes.length / this.articlesParPage);
+    return Array(totalPages).fill(0).map((_, index) => index + 1);
+  }
+
+  // Méthode pour obtenir le nombre total de pages
+  get totalPages(): number {
+    return Math.ceil(this.datalistes.length / this.articlesParPage);
+  }
 
   };
 

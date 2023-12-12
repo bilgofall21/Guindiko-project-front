@@ -32,7 +32,7 @@
             <p class="card-text"> {{element.description}} </p>
           </div>
           <div>
-            <button class="btn text-white fw-bold my-2 ms-3"appBgColorBlueguindiko> Voir plus</button>
+            <button class="btn text-white fw-bold my-2 ms-3"appBgColorBlueguindiko [routerLink]="['/nos-services']"> Voir plus</button>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
           <h4 class="fw-bold">Mentor</h4>
           <p class="lead text-white">Nos mentors trier sur le volet sont des professinnel certifiés dans leur domaine, en maine de vous assister. Désirer de partager leur experiences et vecus, Ces dernier seront etre la lanterne qui eclaire vos doutes</p>
           <div class="text-end mb-2">
-            <button class="btn text-white fw-bold " appBgColorOrangeguindiko>Decouvrez nos mentors</button>
+            <button class="btn text-white fw-bold " appBgColorOrangeguindiko [routerLink]="['/listes-mentor']" >Decouvrez nos mentors</button>
           </div>
         </div>
         <div class="col-6 shadow-lg ">
@@ -102,5 +102,8 @@
 </section>
 </div>
 </div>
+
+
+
 
 <app-footer></app-footer>

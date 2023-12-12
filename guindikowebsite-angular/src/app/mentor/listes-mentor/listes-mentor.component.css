@@ -26,6 +26,16 @@ hr{
   border: 2px solid #00225A  ;
 }
 
+
+/* style css */
+.btnColor{
+	background-color: #00225A;
+	color: white;
+	font-weight: bold;
+}
+
+
+
 /* carte mentor */
 .itemName{
   height: 30px;
