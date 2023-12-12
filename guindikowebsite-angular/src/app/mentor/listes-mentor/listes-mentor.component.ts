@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -28,4 +29,12 @@ export class ListesMentorComponent {
     }
 
   ]
+  usereData : any;
+  constructor(private userservice : UserService){}
+  listeruser(){
+    this.userservice.getAlls().subscribe((data)=>{
+this.usereData = data;
+console.warn(this.userservice)
+    })
+  }
 }
