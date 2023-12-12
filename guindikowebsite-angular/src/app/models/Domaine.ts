@@ -1,10 +1,12 @@
 export class Domaine {
-    _id!: string;
+    id!: string;
     nomDomaine!: string;
-    image!: string;
+    image?: File;
     description!: string;
+    estArchive!: false;
     createdAt!: string;
     updatedAt!: string;
     createdBy!: string;
     updatedBy!: string;
+  // titreDomaine: any;
   }

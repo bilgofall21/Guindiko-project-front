@@ -32,7 +32,7 @@
 				</a>
 			</li>
 			<li>
-				<a>
+				<a >
 					<i class='bx bxs-shopping-bag-alt' [routerLink]="['/gestion-conteu']"></i>
 					<span class="text"[routerLink]="['/gestion-contenu']">Gestion contenu</span>
 				</a>
@@ -51,7 +51,7 @@
 			</li>
 		</ul>
 		<ul class="side-menu mt-4">
-			
+
 			<li>
 				<a class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
@@ -103,9 +103,9 @@
                   <h5 class="card-title">{{domaine.nomDomaine}}</h5>
                   <p class="card-text">{{domaine.description  }}</p>
                   <a class="">
-                    <i class="fa-solid fa-eye me-4" style="color: #E68513;"></i>
+                    <i class="fa-solid fa-eye me-4" style="color: #E68513;" [routerLink]="['/detailarticle', domaine.id]" ></i>
                     <i class="fa-solid fa-pen me-4" style="color: #E68513;" data-bs-toggle="modal" data-bs-target="#modifierModal" (click)="chargerInfosDomaine(domaine)"></i>
-                    <i class="fa-solid fa-trash-can me-4" style="color: #E68513;" (click)="deleteDomaine(domaine._id)"></i>
+                    <i class="fa-solid fa-trash-can me-4" style="color: #E68513;" (click)="supprimerDomaine(domaine.id)"></i>
                   </a>
                 </div>
               </div>
@@ -129,13 +129,12 @@
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
-	
+
 	<script src="script.js"></script>
 </body>
 </html>
 
 <!-- Popup pour ajouter un service -->
-<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -153,10 +152,6 @@
             <label for="exampleFormControlTextarea1" class="form-label">Contenu</label>
             <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="descrip"></textarea>
           </div>
-          <div class="mb-3">
-            <label for="formFileMultiple" class="form-label">Image(s)</label>
-            <input class="form-control" name="image" type="file" id="formFileMultiple" multiple>
-          </div>
         </form>
       </div>
       <div class="modal-footer">
@@ -167,7 +162,6 @@
   </div>
 </div>
 <!-- Popup pour modifier un service -->
-<!-- Modal -->
 <div class="modal fade" id="modifierModal" tabindex="-1" aria-labelledby="modifierModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -184,14 +178,10 @@
           <label for="modifierFormControlTextarea1" class="form-label">Contenu</label>
           <textarea class="form-control" name="description" id="modifierFormControlTextarea1" rows="3" [(ngModel)]="descrip"></textarea >
         </div>
-        <div class="mb-3">
-          <label for="formFileMultiple" class="form-label">Image(s)</label>
-          <input class="form-control" name="image" type="file" id="formFileMultiple" multiple>
-        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-        <button type="button" class="btn btn-primary" (click)="modifierDomaine(domaine._id)">Modifier</button>
+        <button type="button" class="btn btn-primary" (click)="modifierDomaine()">Modifier</button>
       </div>
     </div>
   </div>

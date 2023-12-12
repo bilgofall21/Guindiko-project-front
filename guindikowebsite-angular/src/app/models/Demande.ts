@@ -1,9 +1,9 @@
 export class Demande {
-  _id!: number;
-  statut!: string;
-  userMentor_id!: number;
-  userMentore_id!: number;
-  estArchive!:string
+  id!: string;
   createdAt!: string;
   updated_At!: string;
-}
+    statut!: string;
+    userMentor_id!: string;
+    userMentore_id!: string;
+    estArchive!:boolean;
+  }

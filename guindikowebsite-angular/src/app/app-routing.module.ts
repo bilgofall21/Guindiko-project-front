@@ -28,17 +28,20 @@ import { AuthComponent } from './auth/auth.component';
 import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
 import { ProfilMentorComponent } from './mentor/profil-mentor/profil-mentor.component';
 import { ArticleService } from './services/article.service';
+import { DetailcontenuComponent } from './dashboardAdmin/detailcontenu/detailcontenu.component';
+import { AuthGuardService } from './services/auth-guard.service';
+import { MessageComponent } from './message/message.component';
 const routes: Routes = [
-  {path : '', component : AccueilComponent,},
+  {path : '',redirectTo : 'accueil', pathMatch :'full' ,},
+  {path : 'accueil', component : AccueilComponent,},
   {path : 'listes-mentor', component :ListesMentorComponent,},
   {path : 'article-home' , component : ArticleHomeComponent,},
   {path : 'details-article', component : DetailsArticleComponent,},
   {path : 'nos-services', component : NosServicesComponent,},
   {path : 'a-propos', component : AProposComponent,},
   {path : 'contact', component : ContactComponent,},
-  {path: 'app-auth', component : AuthComponent,},
+  {path: 'login', component : AuthComponent,},
   { path: 'retourService', component: NosServicesComponent},
-  {path : 'accueil', component : AccueilComponent,},
   {path : 'a-propos', component : AProposComponent,},
   {path : 'contact', component : ContactComponent,},
   {path : 'politique-de-confidentialite', component : PolitiqueDeConfidentialiteComponent,},
@@ -51,18 +54,22 @@ const routes: Routes = [
   {path:'detailArt', component:DetailArtComponent},
   {path:'detailGestman', component:DetailGestionManagementComponent},
   {path:'detailScience', component:DetailScienceComponent},
-  {path: 'dashboard', component:DashboardComponent},
-  {path: '', redirectTo:'dashboard', pathMatch:'full'},
-  {path:'gestion-user', component: GestionUserComponent},
-  {path:'gestion-profil', component: GestionProfilComponent},
-  {path:'gestion-contenu', component: GestionContenuComponent},
-  {path:'gestion-demande', component: GestionDemandeComponent},
-  {path:'gestion-profil-mentor', component:GestionProfilMentorComponent},
-  {path:'dashboardmentor', component:DashboardmentorComponent},
-  {path:'gestion-contenu-mentor', component:GestionContenuMentorComponent},
-  {path:'dashboardmentore', component:DashboardmentoreComponent},
-  {path:'gestion-demande-mentore', component:GestionDemandeMentoreComponent},
-  {path:'gestion-profil-mentore', component:GestionProfilMentoreComponent},
+  {path : 'profil-mentor', component : ProfilMentorComponent},
+  {path:'detailarticle', component:DetailcontenuComponent},
+        // dashbord
+  // {path: '', redirectTo:'dashboard', pathMatch:'full', },
+  {path: 'dashboard/:id', component:DashboardComponent},
+  {path:'gestion-user/:id', component: GestionUserComponent},
+  {path:'gestion-profil/:id', component: GestionProfilComponent},
+  {path:'gestion-contenu/:id', component: GestionContenuComponent},
+  {path:'gestion-demande/:id', component: GestionDemandeComponent},
+  {path:'gestion-profil-mentor/:id', component:GestionProfilMentorComponent},
+  {path:'dashboardmentor/:id', component:DashboardmentorComponent },
+  {path:'gestion-contenu-mentor/:id', component:GestionContenuMentorComponent},
+  {path:'dashboardmentore/:id', component:DashboardmentoreComponent},
+  {path:'gestion-demande-mentore/:id', component:GestionDemandeMentoreComponent},
+  {path:'gestion-profil-mentore/:id', component:GestionProfilMentoreComponent},
+  {path : 'message' , component :MessageComponent}
 ];
 
 @NgModule({

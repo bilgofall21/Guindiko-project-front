@@ -31,25 +31,25 @@
 			</li>
 			<li>
 				<a>
-					<i class='bx bxs-shopping-bag-alt' [routerLink]="['/gestion-contenu-mentor']"></i>
-					<span class="text" [routerLink]="['/gestion-contenu-mentor']">Gestion contenu</span>
+					<i class='bx bxs-shopping-bag-alt' [routerLink]="['/gestion-contenu-mentor/:id']"></i>
+					<span class="text" [routerLink]="['/gestion-contenu-mentor/:id']">Gestion contenu</span>
 				</a>
 			</li>
 			<li>
 				<a >
-					<i class='bx bxs-doughnut-chart' [routerLink]="['/gestion-demande']"></i>
-					<span class="text" [routerLink]="['/gestion-demande']">Gestion demandes</span>
+					<i class='bx bxs-doughnut-chart' [routerLink]="['/gestion-demande/:id']"></i>
+					<span class="text" [routerLink]="['/gestion-demande/:id']">Gestion demandes</span>
 				</a>
 			</li>
 			<li>
 				<a >
-		      <i class='bx bxs-message-dots' [routerLink]="['/gestion-profil-mentor']"></i>
-					<span class="text" [routerLink]="['/gestion-profil-mentor']">Gestion profil</span>
+		      <i class='bx bxs-message-dots' [routerLink]="['/gestion-profil-mentor/:id']"></i>
+					<span class="text" [routerLink]="['/']">Gestion profil</span>
 				</a>
 			</li>
 		</ul>
 		<ul class="side-menu mt-4">
-			
+
 			<li>
 				<a class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
@@ -77,8 +77,9 @@
 				<i class='bx bxs-bell' style="color: #00225A;"></i>
 				<span class="num">8</span>
 			</a>
-			<a href="#" class="profile">
-				<img src="img/people.png">
+			<a [routerLink]="['/message']" class="profile">
+				<!-- <img src="img/people.png"> -->
+        <i class="fa-solid fa-envelope" style="color: #00225A;"></i>
 			</a>
 		</nav>
 		<!-- NAVBAR -->
@@ -113,7 +114,7 @@
           </div>
           </div>
         </div>
-        
+
         <div class="row mt-5 d-flex flex-wrap justify-content-center cardArticle">
             <div>
                 <h3>Articles récents</h3>
@@ -169,7 +170,7 @@
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
-	
+
 	<script src="script.js"></script>
 </body>
 </html>
