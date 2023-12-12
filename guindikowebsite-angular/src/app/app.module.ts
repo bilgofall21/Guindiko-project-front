@@ -40,6 +40,7 @@ import { AProposComponent } from './a-propos/a-propos.component';
 import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailcontenuComponent } from './dashboardAdmin/detailcontenu/detailcontenu.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { DetailcontenuComponent } from './dashboardAdmin/detailcontenu/detailcon
     DashboardmentoreComponent,
     GestionProfilMentoreComponent,
     GestionDemandeMentoreComponent,
-    DetailcontenuComponent
+    DetailcontenuComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

@@ -30,6 +30,7 @@ import { ProfilMentorComponent } from './mentor/profil-mentor/profil-mentor.comp
 import { ArticleService } from './services/article.service';
 import { DetailcontenuComponent } from './dashboardAdmin/detailcontenu/detailcontenu.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { MessageComponent } from './message/message.component';
 const routes: Routes = [
   {path : '',redirectTo : 'accueil', pathMatch :'full' ,},
   {path : 'accueil', component : AccueilComponent,},
@@ -68,6 +69,7 @@ const routes: Routes = [
   {path:'dashboardmentore/:id', component:DashboardmentoreComponent},
   {path:'gestion-demande-mentore/:id', component:GestionDemandeMentoreComponent},
   {path:'gestion-profil-mentore/:id', component:GestionProfilMentoreComponent},
+  {path : 'message' , component :MessageComponent}
 ];
 
 @NgModule({

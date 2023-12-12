@@ -50,16 +50,16 @@ pagecontainer>
                       <h5 class="text-black fw-bold">Nos Mentors</h5>
                       <hr class="border-2 opacity-100">
                     </div>
-                    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-                      <div class="col">
-                        <div class="card" style="width: 18rem;" id="cardmentor">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4" >
+                      <div class="col" *ngFor=" let element of datalistes">
+                        <div class="card" style="width: 18rem;" id="cardmentor" >
                           <img src="https://img.freepik.com/photos-gratuite/vue-face-homme-faisant-presentation-lors-reunion_23-2148817046.jpg?size=626&ext=jpg&ga=GA1.1.2145246215.1689776414&semt=ais" class="card-img-top" alt="...">
                           <div class="card-body">
                             <div class="d-flex justify-content-around gap-4">
                               <!-- <button class="btn text-white fw-bold" appBgColorOrangeguindiko> Prenom</button>
                               <button class="btn text-white fw-bold " appBgColorOrangeguindiko> nom</button> -->
-                              <div class="itemName d-flex justify-content-center align-items-center text-white fw-bold">Prenom</div>
-                              <div class=" itemName d-flex justify-content-center align-items-center text-white fw-bold">nom</div>
+                              <div class="itemName d-flex justify-content-center align-items-center text-white fw-bold">{{element.prenom}}  </div>
+                              <div class=" itemName d-flex justify-content-center align-items-center text-white fw-bold">{{element.nom}} </div>
                             </div >
                             <div class="mt-3">
 
@@ -72,111 +72,7 @@ pagecontainer>
                           </div>
                         </div>
                       </div>
-                      <div class="col">
-                        <div class="card" style="width: 18rem;" id="cardmentor">
-                          <img src="https://img.freepik.com/photos-gratuite/vue-face-homme-faisant-presentation-lors-reunion_23-2148817046.jpg?size=626&ext=jpg&ga=GA1.1.2145246215.1689776414&semt=ais" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <div class="d-flex justify-content-around gap-4">
-                              <!-- <button class="btn text-white fw-bold" appBgColorOrangeguindiko> Prenom</button>
-                              <button class="btn text-white fw-bold " appBgColorOrangeguindiko> nom</button> -->
-                              <div class="itemName d-flex justify-content-center align-items-center text-white fw-bold">Prenom</div>
-                              <div class=" itemName d-flex justify-content-center align-items-center text-white fw-bold">nom</div>
-                            </div >
-                            <div class="mt-3">
 
-                              <h6 class="fw-bold text-black text-center mt-2">Developpeur Fullstack</h6>
-                            </div>
-                          </div>
-                          <div class="text-center mb-2">
-
-                            <button class="btn text-white fw-bold" appBgColorBlueguindiko><i class="fa-regular fa-hand-point-right" [routerLink]="['/profil-mentor']" ></i> Voir profil</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card" style="width: 18rem;" id="cardmentor">
-                          <img src="https://img.freepik.com/photos-gratuite/vue-face-homme-faisant-presentation-lors-reunion_23-2148817046.jpg?size=626&ext=jpg&ga=GA1.1.2145246215.1689776414&semt=ais" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <div class="d-flex justify-content-around gap-4">
-                              <!-- <button class="btn text-white fw-bold" appBgColorOrangeguindiko> Prenom</button>
-                              <button class="btn text-white fw-bold " appBgColorOrangeguindiko> nom</button> -->
-                              <div class="itemName d-flex justify-content-center align-items-center text-white fw-bold">Prenom</div>
-                              <div class=" itemName d-flex justify-content-center align-items-center text-white fw-bold">nom</div>
-                            </div >
-                            <div class="mt-3">
-
-                              <h6 class="fw-bold text-black text-center mt-2">Developpeur Fullstack</h6>
-                            </div>
-                          </div>
-                          <div class="text-center mb-2">
-
-                            <button class="btn text-white fw-bold" appBgColorBlueguindiko><i class="fa-regular fa-hand-point-right"></i> Voir profil</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card" style="width: 18rem;" id="cardmentor">
-                          <img src="https://img.freepik.com/photos-gratuite/vue-face-homme-faisant-presentation-lors-reunion_23-2148817046.jpg?size=626&ext=jpg&ga=GA1.1.2145246215.1689776414&semt=ais" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <div class="d-flex justify-content-around gap-4">
-                              <!-- <button class="btn text-white fw-bold" appBgColorOrangeguindiko> Prenom</button>
-                              <button class="btn text-white fw-bold " appBgColorOrangeguindiko> nom</button> -->
-                              <div class="itemName d-flex justify-content-center align-items-center text-white fw-bold">Prenom</div>
-                              <div class=" itemName d-flex justify-content-center align-items-center text-white fw-bold">nom</div>
-                            </div >
-                            <div class="mt-3">
-
-                              <h6 class="fw-bold text-black text-center mt-2">Developpeur Fullstack</h6>
-                            </div>
-                          </div>
-                          <div class="text-center mb-2">
-
-                            <button class="btn text-white fw-bold" appBgColorBlueguindiko><i class="fa-regular fa-hand-point-right"></i> Voir profil</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card" style="width: 18rem;" id="cardmentor">
-                          <img src="https://img.freepik.com/photos-gratuite/vue-face-homme-faisant-presentation-lors-reunion_23-2148817046.jpg?size=626&ext=jpg&ga=GA1.1.2145246215.1689776414&semt=ais" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <div class="d-flex justify-content-around gap-4">
-                              <!-- <button class="btn text-white fw-bold" appBgColorOrangeguindiko> Prenom</button>
-                              <button class="btn text-white fw-bold " appBgColorOrangeguindiko> nom</button> -->
-                              <div class="itemName d-flex justify-content-center align-items-center text-white fw-bold">Prenom</div>
-                              <div class=" itemName d-flex justify-content-center align-items-center text-white fw-bold">nom</div>
-                            </div >
-                            <div class="mt-3">
-
-                              <h6 class="fw-bold text-black text-center mt-2">Developpeur Fullstack</h6>
-                            </div>
-                          </div>
-                          <div class="text-center mb-2">
-
-                            <button class="btn text-white fw-bold" appBgColorBlueguindiko><i class="fa-regular fa-hand-point-right"></i> Voir profil</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card" style="width: 18rem;" id="cardmentor">
-                          <img src="https://img.freepik.com/photos-gratuite/vue-face-homme-faisant-presentation-lors-reunion_23-2148817046.jpg?size=626&ext=jpg&ga=GA1.1.2145246215.1689776414&semt=ais" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <div class="d-flex justify-content-around gap-4">
-                              <!-- <button class="btn text-white fw-bold" appBgColorOrangeguindiko> Prenom</button>
-                              <button class="btn text-white fw-bold " appBgColorOrangeguindiko> nom</button> -->
-                              <div class="itemName d-flex justify-content-center align-items-center text-white fw-bold">Prenom</div>
-                              <div class=" itemName d-flex justify-content-center align-items-center text-white fw-bold">nom</div>
-                            </div >
-                            <div class="mt-3">
-
-                              <h6 class="fw-bold text-black text-center mt-2">Developpeur Fullstack</h6>
-                            </div>
-                          </div>
-                          <div class="text-center mb-2">
-
-                            <button class="btn text-white fw-bold" appBgColorBlueguindiko><i class="fa-regular fa-hand-point-right"></i> Voir profil</button>
-                          </div>
-                        </div>
-                      </div>
 
 
                     </div>

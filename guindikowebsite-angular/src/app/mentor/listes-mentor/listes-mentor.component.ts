@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+
 
 
 @Component({
@@ -25,7 +27,23 @@ export class ListesMentorComponent {
       dateArticle : "08/12/2023",
       description : " Ces hackers poursuivent des objectifs politiques ou sociaux en utilisant des techniques de piratage. Leur motivation est souvent liée à des convictions idéologiques,",
       imageArticle : "https://img.freepik.com/vecteurs-libre/voler-concept-cyberattaque-donnees_23-2148535004.jpg?size=626&ext=jpg&ga=GA1.1.2145246215.1689776414&semt=sph"
-    }
+    },
 
-  ]
-}
+  ];
+  constructor(private userSER : UserService){};
+
+  ngOnInit(): void {
+    this.listerUser();
+  }
+datalistes : any;
+  listerUser(){
+    this.userSER.getAlls().subscribe((data : any)=>{
+      console.log("data");
+      console.log(data);
+      this.datalistes = data;
+    })
+  };
+  
+
+  };
+

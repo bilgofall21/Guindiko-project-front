@@ -44,7 +44,7 @@
 			<li>
 				<a >
 		      <i class='bx bxs-message-dots' [routerLink]="['/gestion-profil-mentor/:id']"></i>
-					<span class="text" [routerLink]="['/gestion-profil-mentor/:id']">Gestion profil</span>
+					<span class="text" [routerLink]="['/']">Gestion profil</span>
 				</a>
 			</li>
 		</ul>
@@ -77,8 +77,9 @@
 				<i class='bx bxs-bell' style="color: #00225A;"></i>
 				<span class="num">8</span>
 			</a>
-			<a href="#" class="profile">
-				<img src="img/people.png">
+			<a [routerLink]="['/message']" class="profile">
+				<!-- <img src="img/people.png"> -->
+        <i class="fa-solid fa-envelope" style="color: #00225A;"></i>
 			</a>
 		</nav>
 		<!-- NAVBAR -->
