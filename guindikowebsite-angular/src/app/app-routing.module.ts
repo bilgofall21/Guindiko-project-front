@@ -54,19 +54,20 @@ const routes: Routes = [
   {path:'detailGestman', component:DetailGestionManagementComponent},
   {path:'detailScience', component:DetailScienceComponent},
   {path : 'profil-mentor', component : ProfilMentorComponent},
-  {path: 'dashboard/:id', component:DashboardComponent,canActivate : [AuthGuardService]},
+  {path:'detailarticle', component:DetailcontenuComponent},
+        // dashbord
   // {path: '', redirectTo:'dashboard', pathMatch:'full', },
+  {path: 'dashboard/:id', component:DashboardComponent},
   {path:'gestion-user/:id', component: GestionUserComponent},
   {path:'gestion-profil/:id', component: GestionProfilComponent},
   {path:'gestion-contenu/:id', component: GestionContenuComponent},
   {path:'gestion-demande/:id', component: GestionDemandeComponent},
   {path:'gestion-profil-mentor/:id', component:GestionProfilMentorComponent},
-  {path:'dashboardmentor/:id', component:DashboardmentorComponent , canActivate : [AuthGuardService]},
+  {path:'dashboardmentor/:id', component:DashboardmentorComponent },
   {path:'gestion-contenu-mentor/:id', component:GestionContenuMentorComponent},
   {path:'dashboardmentore/:id', component:DashboardmentoreComponent},
-  {path:'gestion-demande-mentore/:id', component:GestionDemandeMentoreComponent, canActivate : [AuthGuardService]},
+  {path:'gestion-demande-mentore/:id', component:GestionDemandeMentoreComponent},
   {path:'gestion-profil-mentore/:id', component:GestionProfilMentoreComponent},
-  {path:'detailarticle', component:DetailcontenuComponent},
 ];
 
 @NgModule({

@@ -64,23 +64,28 @@ errorMsg: any;
                                               };
 
                                               this.authen.loginUser(loginData).subscribe(
-                                                (user: User) => {
+                                                (user: any) => {
                                                   console.log(user);
 
-                                                  this.userfoundid = user.id;
-                                                  let useretat = user.role_id;
+                                                  this.userfoundid = user.user.id;
+                                                  let useretat = user.user.role_id;
 
                                                   if (user) {
                                                     this.affichermessage('success', 'Bienvenu', user.email);
-                                                    if (user.role_id == '1' && user.estArchive === false) {
-                                                      this.router.navigate(['/dashboard:', this.userfoundid]);
+                                                    // alert(this.userfoundid);
+                                                    if (user.user.role_id == 1 && user.user.estArchive ==0) {
+                                                      this.router.navigate(['/dashboard', this.userfoundid]);
+
                                                       this.authen.setUserId(user.id);
-                                                    } else if (user.role_id == '2' && user.estArchive === false) {
-                                                      this.router.navigate(['/dashboardmentore/', this.userfoundid]);
-                                                    } else if (user.role_id == '3' && user.estArchive === false) {
-                                                      this.router.navigate(['/dashboardmentor/', this.userfoundid]);
-                                                    } else {
-                                                      this.affichermessage('Erreur', 'Ce compte a été desactive', 'error');
+                                                    }
+                                                    else if (user.user.role_id == 2 && user.user.estArchive ==0) {
+                                                      this.router.navigate(['/dashboardmentore', this.userfoundid]);
+                                                    }
+                                                    else if (user.user.role_id == 3 && user.user.estArchive ==0) {
+                                                      this.router.navigate(['/dashboardmentor', this.userfoundid]);
+                                                    }
+                                                    else {
+                                                      this.affichermessage('error', 'Ce compte a été desactive', 'error');
                                                     }
                                                   } else {
                                                     this.affichermessage('error', 'Oops', 'Login ou Mot de passe Incorrecte');
