@@ -1,7 +1,6 @@
 <app-header></app-header>
 <!-- Page Content -->
 <div id="baniere">
-  <!-- <img src="../../../assets/fullProject/imgServive/Standard quality control concept m.png" alt="" id="baniere"> -->
 </div>
 <div class="container" id="">
   <div class="entete">
@@ -19,29 +18,9 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 <div class="container" id="contenudesservice">
-
-  <!-- <div class="row" id="service">
-    <!-- Team Member 1 --
-    <div class="" *ngFor="let element of domaines">
-      <div class="card border-0 ">
-        <img [src]="element.imageDomaine" class="card-img-top" id="imagecard" alt="...">
-        <div class="card-body text-center">
-          <h5 class="card-title mb-0">{{element.nomDomaine}} </h5>
-          <div class="card-text text-black">
-            <p> {{element.description}}</p>
-          </div>
-          <div>
-            <button type="button" class="btn " id="boutton" routerLink="/detaildomaine">Voir plus...</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div> -->
   <div class="row" id="service">
     <div class="" *ngFor="let domaine of domaines">
       <div class="card border-0 ">
@@ -52,14 +31,61 @@
             <p>{{ domaine.description }}</p>
           </div>
           <div>
-            <button type="button" class="btn " id="boutton" routerLink="/detaildomaine">Voir plus...</button>
+            <button type="button" class="btn " id="boutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Voir plus...
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Quelques informations sur le mentorat</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <h3>Pourquoi choisir un mentor</h3>
+          <div class="soulignement"></div>
+          <div class="pointSoulignement"></div>
+          <div>
+            <p>Choisir un mentor est une décision importante qui peut avoir un impact significatif sur votre parcours professionnel. Il est essentiel de rechercher un mentor dont les expériences, les valeurs et les compétences correspondent à vos objectifs et à vos besoins.</p>
+          </div>
+        </div>
+        <div>
+          <h3>Le rôle du mentor</h3>
+          <div class="soulignement"></div>
+          <div class="pointSoulignement"></div>
+          <div>
+            <p>
+              Le rôle du mentor consiste à aider le mentoré à mieux se connaître, à développer sa confiance en ses capacités et à se développer professionnellement par le biais des actions concrètes. Il doit :
+            </p>
+            <ul>
+              <li>Comprendre les besoins du mentoré</li>
+              <li>L’informer sur les possibilités disponibles</li>
+              <li>Le conseiller sur les décisions a prendre</li>
+              <li>Lui laisser la liberté de faire ses propres choix</li>
+              <li> L’accompagner dans ses projets</li>
+              <li>l’assister, le soutenir, l’encourager</li>
+              <li>Participer à sa réussite</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retour sur les services</button>
+        <button type="button" class="btn btn-primary" (click)="showMentors()" data-bs-dismiss="modal" >Choisir un mentor</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <app-footer></app-footer>
+
 
 

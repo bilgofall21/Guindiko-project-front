@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Domaine } from 'src/app/models/Domaine';
 import { DomaineService } from '../../services/domaine.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nos-services',
@@ -12,14 +13,16 @@ export class NosServicesComponent implements OnInit {
   filterValue: string = '';
   originalDomaines: Domaine[] = [];
   errorMessage: string = "Ce domaine n'existe pas.";
+  location: any;
 
-  constructor(private domaineService: DomaineService) {}
-
+  constructor(
+    private domaineService: DomaineService,
+    private router : Router,
+    ) {}
   ngOnInit(): void {
     this.loadDomaines();
   }
-
-  loadDomaines(): void {
+    loadDomaines(): void {
     this.domaineService.getDomaines().subscribe(
       (domaines: Domaine[]) => {
         this.domaines = domaines;
@@ -30,13 +33,10 @@ export class NosServicesComponent implements OnInit {
       }
     );
   }
-
   onSearch() {
-    // If the search input is empty, reset the domaines array
     if (this.filterValue.trim() === '') {
       this.domaines = [...this.originalDomaines];
     } else {
-      // Filter the domaines array based on the title
       this.domaines = this.originalDomaines.filter(element =>
         element.nomDomaine.toLowerCase().includes(this.filterValue.toLowerCase())
       );
@@ -47,4 +47,8 @@ export class NosServicesComponent implements OnInit {
       this.errorMessage = '';
     }
   }
+showMentors() {
+  this.router.navigate(['/listes-mentor']);
+  this.location.reload();
+}
 }

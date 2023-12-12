@@ -27,33 +27,33 @@
 		<ul class="side-menu top">
 			<li class="active">
 				<a >
-					<i class='bx bxs-dashboard' [routerLink]="['/dashboard']"></i>
-					<span class="text" [routerLink]="['/dashboard']">Dashboard</span>
+					<i class='bx bxs-dashboard' [routerLink]="['/dashboard/id']"></i>
+					<span class="text" [routerLink]="['/dashboard/id']">Dashboard</span>
 				</a>
 			</li>
 			<li>
 				<a>
-					<i class='bx bxs-shopping-bag-alt' [routerLink]="['/gestion-contenu']"></i>
-					<span class="text" [routerLink]="['/gestion-contenu']">Gestion contenu</span>
+					<i class='bx bxs-shopping-bag-alt' [routerLink]="['/gestion-contenu/id']"></i>
+					<span class="text" [routerLink]="['/gestion-contenu/id']">Gestion contenu</span>
 				</a>
 			</li>
 			<li>
 				<a >
-					<i class='bx bxs-doughnut-chart' [routerLink]="['/gestion-user']"></i>
-					<span class="text" [routerLink]="['/gestion-user']">Gestion utilisateurs</span>
+					<i class='bx bxs-doughnut-chart' [routerLink]="['/gestion-user/id']"></i>
+					<span class="text" [routerLink]="['/gestion-user/id']">Gestion utilisateurs</span>
 				</a>
 			</li>
 			<li>
 				<a >
-		      <i class='bx bxs-message-dots' [routerLink]="['/gestion-profil']"></i>
-					<span class="text" [routerLink]="['/gestion-profil']">Gestion profil</span>
+		      <i class='bx bxs-message-dots' [routerLink]="['/gestion-profil/id']"></i>
+					<span class="text" [routerLink]="['/gestion-profil/id']">Gestion profil</span>
 				</a>
 			</li>
 		</ul>
 		<ul class="side-menu mt-4">
-			
+
 			<li>
-				<a class="logout">
+				<a class="logout" [routerLink]="['/dashboard/:id']" >
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Deconnexion</span>
 				</a>
@@ -90,7 +90,7 @@
 		<!-- MAIN -->
 		<main>
       <div class="content-wrapper">
-        
+
         <div class="carte mt-3">
           <div class="carte-items d-flex py-3 px-5 rounded">
             <div class="iconeOffre">
@@ -118,7 +118,7 @@
           </div>
           </div>
         </div>
-        
+
         <div class="">
           <div class="d-flex flex-wrap justify-content-between">
             <h5 class="card-title allUser text-white py-2 px-2 mt-4">Utilisateurs récents</h5>
@@ -275,7 +275,7 @@
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
-	
+
 	<script src="script.js"></script>
 </body>
 </html>
