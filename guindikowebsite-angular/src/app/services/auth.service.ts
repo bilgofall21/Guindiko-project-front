@@ -47,7 +47,7 @@ export class AuthService {
     // methode pour s'inscrire
 
     registerUser(registrationData: any): Observable<any> {
-      return this.http.post<any>('https://your-api-endpoint.com/register', registrationData);
+      return this.http.post<any>('https://guindiko2.mouhamadoufaye.tech/api/register', registrationData);
     }
 
 
