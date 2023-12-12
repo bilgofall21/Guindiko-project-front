@@ -20,7 +20,7 @@ export class GestionContenuComponent {
   domaine :Domaine={
     id: '',
     nomDomaine: '',
-    image: new File([], 'example.jpg'),
+    image: '',
     description: '',
     createdAt: '',
     estArchive: false,
@@ -58,8 +58,9 @@ export class GestionContenuComponent {
     Swal.fire({
       title:title,
       text:text,
-      icon:icon
-    })
+      icon:icon,
+      timer: 3000
+    });
   }
 
   // Méthode pour vider les champs
@@ -84,9 +85,10 @@ export class GestionContenuComponent {
   // Méthode pour ajouter un domaine
   addDomaine(){
     this.domaineService.ajoutDomaine(this.mapToDomaine()).subscribe((data: any) =>{
+      this.getDomaines();
+      this.showAlert("Félicitation","Domaine ajouté avec succes","success")
+      this.viderChapms()
     })
-    this.showAlert("Félicitation","Domaine ajouté avec succes","success")
-    this.viderChapms()
   }
 
   mapToDomaine(): Domaine {
@@ -143,6 +145,7 @@ modifierDomaine() {
       () => {
         this.showAlert("Domaine modifié", "", "success");
         this.getDomaines(); // Mettre à jour la liste des domaines après modification
+        this.viderChapms();
       },
       (error) => {
         console.error('Erreur lors de la modification du domaine', error);

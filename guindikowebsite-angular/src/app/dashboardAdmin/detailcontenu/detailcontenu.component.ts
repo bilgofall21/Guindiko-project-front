@@ -25,7 +25,7 @@ export class DetailcontenuComponent implements OnInit{
   sousdomaine :Sousdomaine={
     id: '',
     nomSousDomaine: '',
-    image: new File([], 'example.jpg'),
+    image: '',
     description: '',
     createdAt: '',
     estArchive: false,
@@ -59,7 +59,7 @@ export class DetailcontenuComponent implements OnInit{
 
   // Méthode pour récupérer les sous-domaines spécifiques à un domaine
   getSousDomaines(domaineId: string): void {
-    console.log('ID du domaine:', domaineId);
+    // console.log('ID du domaine:', domaineId);
     this.sousdomaineService.getSousDomaines(domaineId).subscribe(
       (data: Sousdomaine[]) => {
         this.listeSousDomaines = data;
@@ -87,12 +87,13 @@ export class DetailcontenuComponent implements OnInit{
 
   addSousDomaine() {
     // Utilisation de this.domaineId dans la méthode addSousDomaine()
-    this.sousdomaineService.ajoutSousDomaine(this.mapToDomaine(), this.domaineId).subscribe((data: any) => {
-      this.showAlert("Félicitation", "Sous domaine ajouté avec succès", "success");
-      this.viderChapms();
-      console.log(this.domaineId);
+    console.log('ID du domaine:', this.domaineId);
+    // this.sousdomaineService.ajoutSousDomaine(this.mapToDomaine(), this.domaineId).subscribe((data: any) => {
+      // this.showAlert("Félicitation", "Sous domaine ajouté avec succès", "success");
+      // this.viderChapms();
+      // console.log(this.domaineId);
       // console.log(this.sousdomaine);
-    });
+    // });
   }
   mapToDomaine(): Sousdomaine {
     // Crée une nouvelle instance de Domaine en utilisant l'instance existante

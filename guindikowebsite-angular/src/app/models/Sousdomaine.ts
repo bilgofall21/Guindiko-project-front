@@ -1,7 +1,7 @@
 export class Sousdomaine {
     id!: string;
     nomSousDomaine!: string;
-    image?:File ;
+    image!:string ;
     description!: string;
     estArchive!: boolean;
     createdAt!: string;

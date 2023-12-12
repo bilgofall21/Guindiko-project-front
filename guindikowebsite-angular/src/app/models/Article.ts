@@ -1,7 +1,7 @@
 export class Article {
     id!: string;
     contenu!: string;
-    image!: File;
+    image!: string;
     nombreClique!: number;
     createdAt!: string;
     updatedAt!: string;

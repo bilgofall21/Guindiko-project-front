@@ -1,7 +1,7 @@
 export class Domaine {
     id!: string;
     nomDomaine!: string;
-    image?: File;
+    image!: string;
     description!: string;
     estArchive!: false;
     createdAt!: string;
