@@ -5,7 +5,11 @@
   "projects": {
     "guindikowebsite-angular": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -75,7 +79,8 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "guindikowebsite-angular:build"
+            "browserTarget": "guindikowebsite-angular:build",
+            "proxyConfig": "src/proxy.conf.json"
           }
         },
         "test": {
