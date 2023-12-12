@@ -1,9 +1,59 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { Article } from '../models/Article';
+import { Observable, catchError, throwError } from 'rxjs';
+import { url } from './api-url.service';
 @Injectable({
   providedIn: 'root'
 })
 export class ArticleService {
 
-  constructor() { }
+  getArticles() : Observable<any>{
+    return this.http.get<Article[]>(`${url}/listerArticle`);
+  }
+
+   // geteById
+getById(id: string)
+{
+  return this.http.get<Article>(`${url}/listerArticle/`+ id).pipe(
+    // catchError(error => throwError(error.error.message))
+  );
 }
+ // Ajout
+ajoutarticle(article: Article) {
+  return this.http.post<{ message: string }>(`${url}/ajouterArticle`, Article);
+}
+
+ // Mettre à jour un domaine existant
+ updateArticle(id: string, changes: Partial<Article>): Observable<{ message: string }> {
+  return this.http.put<{ message: string }>(`${url}/modifierArticle/${id}`, changes);
+}
+
+// Modificacion
+edit(id: string, Article : Article) {
+  return this.http.put<{ message: string }>(`${url}/modifierArticle/` + id, Article);
+}
+
+// Suppression
+delete(id: string) {
+  return this.http.delete<{ message: string }>(`${url}/supprimerArticle/` + id);
+}
+
+  constructor(private http : HttpClient) { }
+  getAllArticles () : Observable <any> {
+    return this.http.get<Article[]>(`${url}/listerArticles`)
+  }
+// methode pour ajouter article
+
+  // Ajouter
+  addArticles(article : Article) {
+    return this.http.post<{ message: string }>(`${url}/ajouterArticle`, article);
+  }
+
+
+}
+  // Ajout
+  //  ajoutDomaine(domaine : Domaine) {
+  //   return this.http.post<{ message: string }>(`${url}/ajouterDomaine`, domaine);
+
+
