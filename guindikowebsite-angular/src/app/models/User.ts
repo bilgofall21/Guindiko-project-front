@@ -6,7 +6,6 @@ export class User {
     prenom!: string;
     image!: string;
     role_id !: number;
-    image?: File;
     telephone!: string;
     estArchive!: number;
     datedeNaissance!:Date;

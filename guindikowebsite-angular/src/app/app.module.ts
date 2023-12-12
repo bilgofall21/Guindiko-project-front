@@ -38,8 +38,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthComponent } from './auth/auth.component';
 import { AProposComponent } from './a-propos/a-propos.component';
 import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { DetailcontenuComponent } from './dashboardAdmin/detailcontenu/detailcontenu.component';
+import { AuthInterceptor } from './interceptors/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -76,10 +77,7 @@ import { DetailcontenuComponent } from './dashboardAdmin/detailcontenu/detailcon
     DashboardmentoreComponent,
     GestionProfilMentoreComponent,
     GestionDemandeMentoreComponent,
-<<<<<<< HEAD
-    DetailcontenuComponent
-=======
->>>>>>> 116adbd94f84793c7f6587f1f48ac4bcc968b50c
+    DetailcontenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,7 +87,12 @@ import { DetailcontenuComponent } from './dashboardAdmin/detailcontenu/detailcon
     ReactiveFormsModule,
 
   ],
-  providers: [],
+  providers: [
+   {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

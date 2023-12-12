@@ -9,10 +9,11 @@ import { url } from './api-url.service';
   providedIn: 'root'
 })
 export class AuthService {
+  private authTokenKey = 'authToken';
+  
   setUserId(id: string) {
     throw new Error('Method not implemented.');
   }
-
 
   constructor(private http : HttpClient,
               private  router : Router){}
@@ -30,6 +31,12 @@ export class AuthService {
 
       return this.http.post<{ message: string }>(`${url}/register`, user);
     }
+
+      // Méthode pour stocker le token d'authentification
+  setAuthToken(token: string) {
+    this.authToken = token;
+    localStorage.setItem(this.authTokenKey, token);
+  }
 
     // methode token a appeler lorsque ce dernier ne serait plus vide
     getToken(): string {

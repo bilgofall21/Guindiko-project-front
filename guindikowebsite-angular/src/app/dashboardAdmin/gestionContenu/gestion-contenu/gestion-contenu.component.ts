@@ -65,7 +65,6 @@ export class GestionContenuComponent {
   }
 
   // Méthode pour vider les champs
-    // Methode pour vider les champs
     viderChapms(){
       this.nom = "",
       this.descrip = ""

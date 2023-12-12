@@ -92,12 +92,13 @@
       <button class="btnAdd p-1 px-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter un article</button>
       <div class="content-wrapper">
         <div class="row mt-5 d-flex flex-wrap justify-content-center cardsAticle">
-          <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let element of listeArticles">
-            <div class="card imgCard" style="width: 18rem;" *ngFor="let element of listeArticles" >
-              <img [src]="element.image" class="card-img-top" alt="...">
+          <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let article of listeArticles">
+            <div class="card imgCard" style="width: 18rem;">
+              <img [src]=article.image class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title"> {{element.titre}} </h5>
-                <p class="card-text"> {{element.contenu}} </p>
+                <h5 class="card-title">{{article.titre}}</h5>
+                <p class="card-text">{{article.contenu}}</p>
+                <p class="card-text">{{article.domaine}}</p>
                 <a class="">
                   <i class="fa-solid fa-eye me-4" style="color: #E68513;"></i>
                   <i class="fa-solid fa-pen me-4" style="color: #E68513;"></i>
@@ -109,9 +110,20 @@
 
         </div>
       </div>
+	               <!-- pour la pagination -->
+    <div class="d-flex flex-wrap justify-content-center my-5">
+      <button class="btn btnColor me-2" [disabled]="pageActuelle === 1" (click)="pageActuelle = pageActuelle - 1">
+        Précédent
+      </button>
+      <button class="btn btnColor ms-2" *ngFor="let page of pages" (click)="pageActuelle = page">
+        {{ page }}
+      </button>
+      <button class="btn btnColor ms-2" [disabled]="pageActuelle === totalPages" (click)="pageActuelle = pageActuelle + 1">
+        Suivant
+      </button>
+  </div>
 
-
-		</main>
+	</main>
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
@@ -119,7 +131,7 @@
 	<script src="script.js"></script>
 </body>
 </html>
-<!-- Popup pour ajouter un service -->
+<!-- Popup pour ajouter un article -->
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -131,34 +143,27 @@
       <div class="modal-body">
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Titre</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1"  [(ngModel)]="nom" placeholder="">
+          <input type="text" class="form-control" name="titre" id="exampleFormControlInput1"  placeholder="" [(ngModel)]="titre">
         </div>
-        <!-- <div class="mb-3">
-          <label for="domaineId">Domaine:</label>
-      <select id="domaineId" formControlName="domaineId">
-        <option *ngFor="let domaine of domaines" [value]="domaine.id">{{ domaine.nom }}</option>
-      </select>
-    </div> -->
-    <select class="form-select" aria-label="Default select example ">
-      <option selected>Domaine</option>
-      <option value="1">One</option>
-
-    </select>
-
-    <label for="exampleFormControlInput1" class="form-label">Domaine</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name ="domaine"  [(ngModel)]="domain"  placeholder="">
+		<select class="form-select" aria-label="Default select example" [(ngModel)]="domaine">
+			<option selected>{{article.domaine}}</option>
+			<option selected name="domaine">domaine</option>
+			<option value="Informatique">Informatique</option>
+			<option value="Art">Art</option>
+			<option value="Management">Management</option>
+		</select>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"  [(ngModel)]="descrip" >Contenu</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label for="exampleFormControlTextarea1" class="form-label"  >Contenu</label>
+          <textarea class="form-control" name="contenu" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="contenu"></textarea>
         </div>
         <div class="mb-3">
-          <label for="formFileMultiple" class="form-label">Image(s)</label>
-          <input class="form-control" type="file" id="formFileMultiple" multiple>
-        </div>
+			<label for="exampleFormControlInput1" class="form-label">Image</label>
+			<input type="text" class="form-control" name="image" id="exampleFormControlInput1"  placeholder="" [(ngModel)]="image">
+		  </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-        <button type="button" type = "submit" class="btn addArticle" (click)="ajouterArticle ()" >Ajouter</button>
+        <button type="button" type = "submit" class="btn addArticle" (click)="addArticle()">Ajouter</button>
       </div>
     </div>
   </div>

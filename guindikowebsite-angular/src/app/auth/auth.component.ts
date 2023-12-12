@@ -72,6 +72,7 @@ errorMsg: any;
 
                                                   if (user) {
                                                     this.affichermessage('success', 'Bienvenu', user.email);
+                                                    
                                                     // alert(this.userfoundid);
                                                     if (user.user.role_id == 1 && user.user.estArchive ==0) {
                                                       this.router.navigate(['/dashboard', this.userfoundid]);
@@ -222,4 +223,8 @@ loadRoles() :  void {
 
 
 
+
+function setAuthToken() {
+  throw new Error('Function not implemented.');
+}
 
