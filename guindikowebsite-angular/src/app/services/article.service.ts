@@ -7,6 +7,10 @@ import { url } from './api-url.service';
   providedIn: 'root'
 })
 export class ArticleService {
+  addArticles(arg0: Article) {
+    throw new Error('Method not implemented.');
+  }
+  url: any;
 
   getArticles() : Observable<any>{
     return this.http.get<Article[]>(`${url}/listerArticle`);
@@ -20,9 +24,7 @@ getById(id: string)
   );
 }
  // Ajout
-ajoutarticle(article: Article) {
-  return this.http.post<{ message: string }>(`${url}/ajouterArticle`, Article);
-}
+
 
  // Mettre à jour un domaine existant
  updateArticle(id: string, changes: Partial<Article>): Observable<{ message: string }> {
@@ -45,11 +47,9 @@ delete(id: string) {
   }
 // methode pour ajouter article
 
-  // Ajouter
-  addArticles(article : Article) {
-    return this.http.post<{ message: string }>(`${url}/ajouterArticle`, article);
-  }
-
+ajoutArticle(article: Article): Observable<{ message: string }> {
+  return this.http.post<{ message: string }>(`${this.url}/ajouterArticle`, article);
+}
 
 }
   // Ajout

@@ -93,8 +93,8 @@
       <button class="btnAdd p-1 px-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter un article</button>
       <div class="content-wrapper">
         <div class="row mt-5 d-flex flex-wrap justify-content-center cardsAticle">
-          <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let element of listeArticles">
-            <div class="card imgCard" style="width: 18rem;" *ngFor="let element of listeArticles" >
+          <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let element of dataArticle">
+            <div class="card imgCard" style="width: 18rem;"  >
               <img [src]="element.image" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"> {{element.titre}} </h5>
@@ -159,7 +159,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-        <button type="button" type = "submit" class="btn addArticle" (click)="ajouterArticle ()" >Ajouter</button>
+        <button type="button" type = "submit" class="btn addArticle"(click)="ajouterNouvelArtcle ()"  >Ajouter</button>
       </div>
     </div>
   </div>

@@ -37,31 +37,44 @@ export class ListesMentorComponent {
 
   ngOnInit(): void {
     this.listerUser();
+    this.listesMentor();
   }
 datalistes : any;
+dataListeMentor : any;
+
+// methode pourrecuperer les utilisateurs
   listerUser(){
     this.userSER.getAlls().subscribe((data : any)=>{
-      console.log("data");
-      console.log(data);
+      // console.log("data");
+      // console.log(data);
       this.datalistes = data;
     })
   };
+
+  // methode pour recuper liste des mentor
+  listesMentor (){
+    this.userSER.getUsersWithRoleId3().subscribe((datamentor) =>{
+      // console.log("datamentor");
+      // console.warn(datamentor);
+      this.dataListeMentor = datamentor;
+    })
+  }
 
   // methode pagination
   getUserPage(): any[] {
     const indexDebut = (this.pageActuelle - 1) * this.articlesParPage;
     const indexFin = indexDebut + this.articlesParPage;
-    return this.datalistes.slice(indexDebut, indexFin);
+    return this.dataListeMentor.slice(indexDebut, indexFin);
   }
    // Méthode pour générer la liste des pages
    get pages(): number[] {
-    const totalPages = Math.ceil(this.datalistes.length / this.articlesParPage);
+    const totalPages = Math.ceil(this.dataListeMentor.length / this.articlesParPage);
     return Array(totalPages).fill(0).map((_, index) => index + 1);
   }
 
   // Méthode pour obtenir le nombre total de pages
   get totalPages(): number {
-    return Math.ceil(this.datalistes.length / this.articlesParPage);
+    return Math.ceil(this.dataListeMentor.length / this.articlesParPage);
   }
 
   };

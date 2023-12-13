@@ -8,7 +8,7 @@ export class User {
     image?: File;
     telephone!: string;
     estArchive!: number;
-    datedeNaissance!:Date;
+    datedeNaissance!:string;
     domain_id !:string;
     email_verified_at!: string;
     remember_token!:string;

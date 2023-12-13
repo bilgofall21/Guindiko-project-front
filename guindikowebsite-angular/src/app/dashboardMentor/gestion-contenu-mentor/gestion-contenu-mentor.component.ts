@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./gestion-contenu-mentor.component.css']
 })
 export class GestionContenuMentorComponent {
+  dataArticle: any;
 getArticlesPage(): any {
 throw new Error('Method not implemented.');
 }
@@ -77,12 +78,12 @@ this.articleService.getAllArticles().subscribe((data:Article[])=>{
 );
   }
 // methode pour ajouter article
-ajouterArticle () : void{
-  this.articleService.addArticles(this.mapToArticle()).subscribe((data : any) =>{
-  })
-  this.showAlert("Félicitation","Article ajouté avec succes","success")
-  this.viderChapms()
-}
+// ajouterArticle () : void{
+//   this.articleService.addArticles(this.mapToArticle()).subscribe((data : any) =>{
+//   })
+//   this.showAlert("Félicitation","Article ajouté avec succes","success")
+//   this.viderChapms()
+// }
 
 // creation d'une nouvelle instance de Article
   mapToArticle(): Article {
@@ -92,6 +93,38 @@ ajouterArticle () : void{
   article.domaine = this.domain;
   return this.article;
   }
+
+
+
+  listesArticles (){
+    this.articleService.getAllArticles().subscribe((datanew : any)=>{
+      console.log("datanew");
+      console.warn(datanew);
+      this.dataArticle = datanew;
+
+    })
+  }
+  // methode pour ajouter un nouvel article
+  ajouterNouvelArtcle (){
+
+      // initialise les proprietes du nouveao article
+    const nouvelArticle : Article ={
+      id :"",
+    titre :"",
+    domaine :"",
+    contenu :"",
+    image :"",
+    nombreClique :0,
+    createdAt :"",
+    updatedAt :"",
+    createdBy :"",
+    updatedBy :"",
+    }
+    this.articleService.ajoutArticle(nouvelArticle).subscribe((reponse) =>{
+      this.listesArticles();
+    })
+  }
+
 }
 
 

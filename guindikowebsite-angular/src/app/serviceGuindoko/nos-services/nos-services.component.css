@@ -1,7 +1,11 @@
+.pagecontainer{
+  margin-top: 120px;
+}
+
 #service{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 3vh;
+  gap: 5vh;
   padding-top: 15vh;
   padding-bottom: 10vh;
 }
@@ -44,6 +48,7 @@ h3{
   background-color: #00225A;
   color: #ffffff;
   font-weight: bold;
+
 }
 #divbutton{
   justify-content: center;

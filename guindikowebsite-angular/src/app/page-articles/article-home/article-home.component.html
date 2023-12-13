@@ -18,16 +18,16 @@
           <div class="carousel-item active px-5">
             <div class="container">
             <div class="row">
-              <div class=" col latest-news-item" *ngFor="let element of articles" id="dernierarticle">
+              <div class=" col latest-news-item" *ngFor="let element of dataArticle" id="dernierarticle">
                   <div class="bg-light rounded" style="width: 16rem;" >
                       <div class="rounded-top overflow-hidden">
-                          <img [src]="element.imageArticle" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                          <img [src]="element.image" class="img-zoomin img-fluid rounded-top w-100" alt="">
                       </div>
                       <div class="d-flex flex-column p-4">
-                          <a [routerLink]="['/details-article',]" class="h4"> {{element.titreArticle}} </a>
+                          <a [routerLink]="['/details-article',]" class="h4"> {{element.titre}} </a>
                           <div class="d-flex justify-content-between" id="auteurnew">
                               <a href="#" class="small text-body link-hover" id="auteurnew">{{element.auteurArticle}}</a>
-                              <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> {{element.dateArticle}}</small>
+                              <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> {{element.created_at}}</small>
                           </div>
                       </div>
                   </div>
